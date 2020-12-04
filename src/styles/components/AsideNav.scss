@@ -1,0 +1,17 @@
+nav {
+    border: 1px solid rgb(142, 10, 10);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: rgba(128, 128, 128, 0.509);
+    a {
+        color: #000;
+        transform: rotate(90deg);
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    .is-active {
+        color: green;
+        text-decoration: underline;
+    }
+}

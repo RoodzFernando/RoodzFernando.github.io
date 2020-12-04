@@ -9,11 +9,11 @@ import AsideNav from '../components/AsideNav'
 
 function AppRoutes() {
     return (
-        <div>
+        <div className="app-routes">
             <Router>
                 <AsidePage />
                 <Switch>
-                    <Route path="/" component={App} />
+                    <Route path="/" component={App} exact={true} />
                     <Route path="/about" component={About} />
                     <Route path="/projects" component={Projects} />
                     <Route path="/contact" component={Contact} />
