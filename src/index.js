@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom';
 // import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import AppRoutes from './routers/AppRoutes';
-import './styles/styles.scss'
+import './styles/styles.scss';
+import { Provider } from 'react-redux'
+import { store } from './redux/redux';
+
+console.log(store.getState())
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppRoutes />
+    <Provider store={store}>
+      <AppRoutes />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
