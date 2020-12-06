@@ -7,7 +7,9 @@ import './styles/styles.scss';
 import { Provider } from 'react-redux'
 import { store } from './redux/redux';
 
-console.log(store.getState())
+// store.subscribe(() => {
+//   console.log(store.getState())
+// })
 
 ReactDOM.render(
   <React.StrictMode>

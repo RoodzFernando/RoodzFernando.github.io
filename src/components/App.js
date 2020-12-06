@@ -1,17 +1,16 @@
 import React, { useEffect } from 'react'
-// import { connect } from 'react-redux'
-// import { requestProjects } from '../redux/redux'
+import { connect } from 'react-redux'
 import { getProjects } from '../services/api'
 
-function App({dispatch}) {
+function App({ storeProjects }) {
   useEffect(() => {
     getProjects()
   }, [])
     return (
       <div>
         <h1>List of Projects</h1>
-        {/* { 
-          projects.projects.map(project => (
+        { 
+          storeProjects.map(project => (
             <div className="project-card">
               <h1>{project.title}</h1>
               <p>{project.description}</p>
@@ -19,9 +18,15 @@ function App({dispatch}) {
               <p>{project.source_code}</p>
             </div>
           ))
-        } */}
+        }
       </div>
     )
 }
 
-export default App
+const mapStateToProps = (state) => {
+  return {
+    storeProjects: state.projects
+  }
+}
+
+export default connect(mapStateToProps)(App)

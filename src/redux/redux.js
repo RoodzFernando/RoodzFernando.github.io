@@ -43,14 +43,14 @@ const projectsReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        projects: [...state.projects, action.data ],
+        projects: [...state.projects, ...action.payload ],
         msg: ''
       }
     case projectRequestFail:
       return {
         ...state,
         loading: false,
-        msg: action.error
+        msg: action.payload
       }
     default:
       return state
