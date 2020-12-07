@@ -12,3 +12,18 @@ export const getProjects = () => {
         store.dispatch(requestSuccess(data.data.projects))
       })
 }
+
+// Login User
+export const loginUser = ({ username, password, history }) => {
+  axios.post('http://localhost:3001/login', {
+    username,
+    password
+  }).then(response => {
+    localStorage.setItem('token', response.data.token)
+    history.push('/dashboard')
+  }).catch(err => {
+    if (err.response) {
+      store.dispatch(requestFail(err.response.data.message))
+    }
+  })
+}
