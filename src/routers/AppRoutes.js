@@ -8,6 +8,7 @@ import Contact from '../components/Contact';
 import AsideNav from '../components/AsideNav'
 import Login from '../components/Login'
 import Dashboard from '../components/Dashboard'
+import ProjectCreate from '../components/ProjectCreate'
 
 function AppRoutes() {
     return (
@@ -21,6 +22,7 @@ function AppRoutes() {
                     <Route path="/contact" component={Contact} />
                     <Route path="/login" component={Login} />
                     <Route path="/dashboard" component={Dashboard} />
+                    <Route path="/new-project" component={ProjectCreate} />
                 </Switch>
                 <AsideNav />
             </Router>

@@ -1,0 +1,11 @@
+@import '../base/input';
+
+.new-project {
+  form {
+    @include form-style;
+    textarea {
+      width: 153%;
+      margin-bottom: 15px;
+    }
+  }
+}
