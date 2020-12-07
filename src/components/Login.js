@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { loginUser } from '../services/api'
 
-function Login(props) {
+function Login({message, history}) {
   const [credentials, setCredentials] = useState({
     username: '',
     password: ''
@@ -12,7 +12,7 @@ function Login(props) {
     setCredentials({
       ...credentials,
       [name]: value,
-      history: props.history
+      history
     })
   }
 
@@ -25,7 +25,7 @@ function Login(props) {
             <form>
                 <h2>Login</h2>
             <div className="error-msg">
-              <span>{props.message}</span>
+              <span>{message}</span>
             </div>
                 <input type="text" placeholder="Username" name="username"  onChange={changehandle} />
                 <input type="password" placeholder="Password" name="password" onChange={changehandle}/>
