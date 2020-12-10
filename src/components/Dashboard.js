@@ -1,8 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Dashboard() {
   return (
-    <h1>Dashboard</h1>
+    <div>
+      <h1>Dashboard</h1>
+      <Link to='/new-project'>New Project</Link>
+    </div>
   )
 }
 
