@@ -3,6 +3,7 @@ import { createStore } from 'redux';
 const initialState = {
   loading: false,
   projects: [],
+  links: [],
   msg: ''
 }
 // Actions
@@ -16,10 +17,11 @@ export const requestStart = () => {
   }
 }
 
-export const requestSuccess = (data) => {
+export const requestSuccess = (data, links) => {
   return {
     type: projectRequestSuccess,
-    payload: data
+    payload: data,
+    links
   }
 }
 
@@ -44,6 +46,7 @@ const projectsReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         projects: [...state.projects, ...action.payload ],
+        links: [...state.links, ...action.links],
         msg: ''
       }
     case projectRequestFail:

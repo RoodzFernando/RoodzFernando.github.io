@@ -1,32 +1,10 @@
-import React, { useEffect } from 'react'
-import { connect } from 'react-redux'
-import { getProjects } from '../services/api'
+import React from 'react'
 
-function App({ storeProjects }) {
-  useEffect(() => {
-    getProjects()
-  }, [])
+function App() {
+  
     return (
-      <div>
-        <h1>List of Projects</h1>
-        { 
-          storeProjects.map(project => (
-            <div className="project-card">
-              <h1>{project.title}</h1>
-              <p>{project.description}</p>
-              <p>{project.live_version}</p>
-              <p>{project.source_code}</p>
-            </div>
-          ))
-        }
-      </div>
+      <h1>Home page</h1>
     )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    storeProjects: state.projects
-  }
-}
-
-export default connect(mapStateToProps)(App)
+export default App

@@ -13,8 +13,10 @@ export const getProjects = () => {
     response => {
       store.dispatch(requestStart())
       return response
-    }).then(data => {
-    store.dispatch(requestSuccess(data.data.projects))
+    }).then(responseData => {
+      // console.log(responseData);
+    store.dispatch(requestSuccess(responseData.data.projects, responseData.data.links))
+    // store.dispatch(requestSuccess())
   })
 }
 
@@ -43,7 +45,7 @@ export const createNewProject = (projectData, headers) => {
   // console.log(projectData.image.files[0])
   const { title, description, live_version, source_code } = projectData
   const { files } = projectData.image
-
+  
   // const imageLoader = new FormData()
   // imageLoader.append("image", files[0])
 
@@ -71,7 +73,7 @@ export const createNewProject = (projectData, headers) => {
   //     project.append(key, projectData[key])
   // });
 
-  axios.post('http://localhost:3001/projects', project , {headers,})
+  axios.post('http://localhost:3001/projects', project, {headers,})
     .then(response => {
       console.log(response)
     })
