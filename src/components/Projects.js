@@ -1,39 +1,46 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import { store } from '../redux/redux';
 import { getProjects } from '../services/api'
+import sourceCode from '../images/source-code.svg'
+import livePreview from '../images/forward.svg'
+import { store } from '../redux/redux'
 
 
 
-function Projects({ storeProjects, linkProjects }) {
-  console.log(store.getState());
-  console.log(linkProjects);
+function Projects({ storeProjects }) {
+  console.log(storeProjects);
   useEffect(() => {
     getProjects()
   }, [])
-    return (
-        <div>
-        <h1>List of Projects</h1>
-        <div className="project-card">
-          <div className="card-head">
-          {
-            linkProjects.map(link => (
-              <img src={link} alt=""/>
-            ))
-          }
 
-          </div>
-        { 
-          storeProjects.map(project => (
-              <div className="card-tail">
-                <h1>{project.title}</h1>
-                <p>{project.description}</p>
-                <p>{project.live_version}</p>
-                <p>{project.source_code}</p>
-              </div>
-          ))
-        }
-        </div>
+    return (
+        <div className="project-page">
+              {
+                storeProjects.map(project => (
+                  <div className="card">
+                    <div className="card-inner">
+                      <figure className="card-front" >
+                            <img src={project.image} alt=""/>
+                      </figure>
+  
+                      <figure className="card-back">
+                        <h2>{ project.title }</h2>
+                        <p>{ project.description }</p>
+  
+                        <div className="project-links">
+                          <a href={ project.source_code }>
+                            <img src={sourceCode} alt=""/>
+                          </a>
+  
+                          <a href={ project.live_version }>
+                            <img src={livePreview} alt=""/>
+                          </a>  
+                        </div>
+                      </figure>
+                    </div>
+                  </div>
+                ))
+              }
       </div>
     )
 }
@@ -41,7 +48,6 @@ function Projects({ storeProjects, linkProjects }) {
 const mapStateToProps = (state) => {
   return {
     storeProjects: state.projects,
-    linkProjects: state.links
   }
 }
 

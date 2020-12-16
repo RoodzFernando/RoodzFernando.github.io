@@ -14,8 +14,8 @@ export const getProjects = () => {
       store.dispatch(requestStart())
       return response
     }).then(responseData => {
-      // console.log(responseData);
-    store.dispatch(requestSuccess(responseData.data.projects, responseData.data.links))
+      // console.log(responseData.data);
+    store.dispatch(requestSuccess(responseData.data))
     // store.dispatch(requestSuccess())
   })
 }
