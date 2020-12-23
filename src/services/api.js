@@ -3,6 +3,7 @@ import {
   requestStart,
   requestSuccess,
   requestFail,
+  deleteProject,
   store
 } from '../redux/redux';
 
@@ -16,6 +17,7 @@ export const getProjects = () => {
     }).then(responseData => {
       // console.log(responseData.data);
     store.dispatch(requestSuccess(responseData.data))
+    // setProjects((responseData.data))
     // store.dispatch(requestSuccess())
   })
 }
@@ -41,7 +43,7 @@ export const loginUser = ({
 
 // Create new Project
 
-export const createNewProject = (projectData, headers) => {
+export const createNewProject = (projectData, headers, history) => {
   // console.log(projectData.image.files[0])
   const { title, description, live_version, source_code } = projectData
   const { files } = projectData.image
@@ -76,5 +78,15 @@ export const createNewProject = (projectData, headers) => {
   axios.post('http://localhost:3001/projects', project, {headers,})
     .then(response => {
       console.log(response)
+      history.push('/dashboard')
     })
+}
+
+// delete a project
+
+export const projectDeletion = id => {
+  axios.delete(`http://localhost:3001/projects/${id}`)
+  .then(response => {
+    store.dispatch(deleteProject(response.data.message))
+  })
 }

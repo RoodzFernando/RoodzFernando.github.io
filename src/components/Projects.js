@@ -3,16 +3,13 @@ import { connect } from 'react-redux'
 import { getProjects } from '../services/api'
 import sourceCode from '../images/source-code.svg'
 import livePreview from '../images/forward.svg'
-import { store } from '../redux/redux'
-
-
 
 function Projects({ storeProjects }) {
-  console.log(storeProjects);
   useEffect(() => {
     getProjects()
   }, [])
-
+  
+  console.log(storeProjects);
     return (
         <div className="project-page">
               {
