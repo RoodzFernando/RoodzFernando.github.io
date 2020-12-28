@@ -1,15 +1,17 @@
-import React, { useEffect } from 'react'
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import { getProjects } from '../services/api'
 import sourceCode from '../images/source-code.svg'
 import livePreview from '../images/forward.svg'
 
 function Projects({ storeProjects }) {
+  const [projects, setProjects] = useState({})
   useEffect(() => {
     getProjects()
   }, [])
   
-  console.log(storeProjects);
+  // console.log(projects);
     return (
         <div className="project-page">
               {

@@ -45,20 +45,29 @@ export const loginUser = ({
 
 export const createNewProject = (projectData, headers, history) => {
   const project = new FormData()
+  //  const project = new FormData()
+  const { title, description, live_version, source_code } = projectData
+  const { files } = projectData.image
 
-  Object.keys(projectData).forEach((key, value) => {
-    if (key === 'image') {
-      project.append('image',projectData['image'].files[0])
-    }else {
-      project.append(key, projectData[key])
-    }
-  });
+  project.append('title', title)
 
-  axios.post(`${BASE_URL}/projects`, project, {headers,})
+  // append the description
+  project.append('description', description)
+
+  // append the live_version
+  project.append('live_version', live_version)
+
+  // append the source_code
+  project.append('source_code', source_code)
+
+  // append the image
+  project.append('image', files[0])
+  
+  axios.post(`${BASE_URL}/projects`, project, {headers})
     .then(response => {
       console.log(response)
       history.push('/dashboard')
-    })
+    }).catch(err => console.log(err))
 }
 
 // delete a project

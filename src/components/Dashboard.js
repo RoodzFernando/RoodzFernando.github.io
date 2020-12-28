@@ -21,17 +21,23 @@ function Dashboard({ storeProjects, message, history }) {
       <span>{message}</span>
     </div>
       <h1>Dashboard</h1>
-      <Link to='/new-project'>New Project</Link>
-      {
-          storeProjects.map(project => (
-        <div className="project-card">
-            <h1>{project.title}</h1>
-            <p>{project.description}</p>
-            <Link to={`/update/${project.id}`}>Edit</Link>
-            <button onClick={() => projectDelete(project.id)}>Delete</button>
-        </div>
-          ))
-      }
+      <Link to='/new-project' className="add-btn">New Project</Link>
+      <div className="page-content">
+        {
+            storeProjects.map(project => (
+          <div key={project.id} className="project-card" style={{
+            'height': '250px',
+            'backgroundImage': `url(${project.image})`,
+            'objectFit': 'cover'
+          }}>
+              <h2>{project.title}</h2>
+              <p>{project.description}</p>
+              <Link to={`/update/${project.id}`}>Edit</Link>
+              <button onClick={() => projectDelete(project.id)}>Delete</button>
+          </div>
+            ))
+        }
+      </div>
     </div>
   )
 }
