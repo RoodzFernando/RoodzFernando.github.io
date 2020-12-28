@@ -44,31 +44,15 @@ export const loginUser = ({
 // Create new Project
 
 export const createNewProject = (projectData, headers, history) => {
-  // console.log(projectData.image.files[0])
-  const { title, description, live_version, source_code } = projectData
-  const { files } = projectData.image
-
   const project = new FormData()
-  // append the title
-  project.append('title', title)
 
-  // append the description
-  project.append('description', description)
-  
-  // append the live_version
-  project.append('live_version', live_version)
-  
-  // append the source_code
-  project.append('source_code', source_code)
-  
-  // append the image
-  project.append('image', files[0])
-
-
-
-  // Object.keys(projectData).forEach((key, value) => {
-  //     project.append(key, projectData[key])
-  // });
+  Object.keys(projectData).forEach((key, value) => {
+    if (key === 'image') {
+      project.append('image',projectData['image'].files[0])
+    }else {
+      project.append(key, projectData[key])
+    }
+  });
 
   axios.post(`${BASE_URL}/projects`, project, {headers,})
     .then(response => {
@@ -90,22 +74,14 @@ export const projectDeletion = id => {
 
 export const projectUpdate = (projectData, headers, id) => {
   const project = new FormData()
-  const { title, description, live_version, source_code } = projectData
-  const { files } = projectData.image
 
-  project.append('title', title)
-
-  // append the description
-  project.append('description', description)
-  
-  // append the live_version
-  project.append('live_version', live_version)
-  
-  // append the source_code
-  project.append('source_code', source_code)
-  
-  // append the image
-  project.append('image', files[0])
+  Object.keys(projectData).forEach((key, value) => {
+    if (key === 'image') {
+      project.append('image',projectData['image'].files[0])
+    }else {
+      project.append(key, projectData[key])
+    }
+  });
 
   axios.put(`${BASE_URL}/projects/${id}`, project, {headers})
   .then(response => console.log(response))
