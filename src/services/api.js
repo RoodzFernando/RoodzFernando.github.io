@@ -7,10 +7,10 @@ import {
   store
 } from '../redux/redux';
 
-
+const BASE_URL = 'http://localhost:3001'
 // Fetch the projects
 export const getProjects = () => {
-  axios.get('http://localhost:3001/projects').then(
+  axios.get(`${BASE_URL}/projects`).then(
     response => {
       store.dispatch(requestStart())
       return response
@@ -28,7 +28,7 @@ export const loginUser = ({
   password,
   history
 }) => {
-  axios.post('http://localhost:3001/login', {
+  axios.post(`${BASE_URL}/login`, {
     username,
     password
   }).then(response => {
@@ -47,11 +47,6 @@ export const createNewProject = (projectData, headers, history) => {
   // console.log(projectData.image.files[0])
   const { title, description, live_version, source_code } = projectData
   const { files } = projectData.image
-  
-  // const imageLoader = new FormData()
-  // imageLoader.append("image", files[0])
-
-  // console.log(projectData)
 
   const project = new FormData()
   // append the title
@@ -75,7 +70,7 @@ export const createNewProject = (projectData, headers, history) => {
   //     project.append(key, projectData[key])
   // });
 
-  axios.post('http://localhost:3001/projects', project, {headers,})
+  axios.post(`${BASE_URL}/projects`, project, {headers,})
     .then(response => {
       console.log(response)
       history.push('/dashboard')
@@ -85,8 +80,42 @@ export const createNewProject = (projectData, headers, history) => {
 // delete a project
 
 export const projectDeletion = id => {
-  axios.delete(`http://localhost:3001/projects/${id}`)
+  axios.delete(`${BASE_URL}/projects/${id}`)
   .then(response => {
     store.dispatch(deleteProject(response.data.message))
   })
+}
+
+// update a project
+
+export const projectUpdate = (projectData, headers, id) => {
+  const project = new FormData()
+  const { title, description, live_version, source_code } = projectData
+  const { files } = projectData.image
+
+  project.append('title', title)
+
+  // append the description
+  project.append('description', description)
+  
+  // append the live_version
+  project.append('live_version', live_version)
+  
+  // append the source_code
+  project.append('source_code', source_code)
+  
+  // append the image
+  project.append('image', files[0])
+
+  axios.put(`${BASE_URL}/projects/${id}`, project, {headers})
+  .then(response => console.log(response))
+}
+
+// fetch a single project
+
+export const fetchproject = (id, setProject) => {
+  axios.get(`${BASE_URL}/projects/${id}`)
+  .then(response => {
+    setProject(response.data.data)
+    })
 }

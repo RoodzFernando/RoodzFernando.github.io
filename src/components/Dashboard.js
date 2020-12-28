@@ -4,21 +4,17 @@ import { connect } from 'react-redux'
 import { getProjects, projectDeletion } from '../services/api'
 
 
-function Dashboard({ storeProjects, message }) {
+function Dashboard({ storeProjects, message, history }) {
    useEffect(() => {
     getProjects()
   }, [])
   const projectDelete = id => {
     // eslint-disable-next-line no-restricted-globals
     const confirmation =  confirm("Do you really want to delete this project?")
-    if (confirmation === true) {
+    if (confirmation) {
       projectDeletion(id)
-      console.log('yes')
-    }else{
-      console.log('no')
     }
   }
-  console.log(message)
   return (
     <div className="dashboard">
     <div className="flash-message">
@@ -31,7 +27,7 @@ function Dashboard({ storeProjects, message }) {
         <div className="project-card">
             <h1>{project.title}</h1>
             <p>{project.description}</p>
-            <button>Edit</button>
+            <Link to={`/update/${project.id}`}>Edit</Link>
             <button onClick={() => projectDelete(project.id)}>Delete</button>
         </div>
           ))

@@ -31,7 +31,7 @@ function ProjectCreate({ history }) {
   return (
     <div className="new-project">
       <h1>Add a new Project</h1>
-      <Form handleChange={handleChange} handleSubmit={handleSubmit} />
+      <Form text='Save' handleChange={handleChange} handleSubmit={handleSubmit} />
     </div>
   )
 }

@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import { getProjects } from '../services/api'
+import React from 'react'
 
 function App() {
    
