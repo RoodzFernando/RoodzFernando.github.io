@@ -6,21 +6,36 @@
     text-align: center;
     text-transform: uppercase;
   }
-  .add-btn {
-    margin-right: 15px;
-    display: block;
-    width: 12%;
-    text-align: center;
-    text-decoration: none;
-    margin: 0 0 15px 15px;
-    border: 1px solid transparent;
-    background: rgb(13, 2, 207);
-    color: #fff;
-    text-transform: uppercase;
-    padding: 6px;
-    border-radius: 5px;
-    &:hover {
-      background: rgba(18, 58, 238, 0.87);
+  .dash-btn {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2%;
+    .add-btn {
+      text-decoration: none;
+      background: rgb(13, 2, 207);
+      color: #fff;
+      text-transform: uppercase;
+      padding: 6px;
+      border-radius: 5px;
+      &:hover {
+        background: rgba(18, 58, 238, 0.87);
+      }
+    }
+    button {
+      padding: 6px;
+      margin-left: 15px;
+      background: rgb(233, 4, 4);
+      border: none;
+      cursor: pointer;
+      width: 110px;
+      height: 30px;
+      color: #fff;
+      border-radius: 5px;
+      text-transform: uppercase;
+      &:hover {
+        background: rgba(233, 4, 4, 0.753);
+      }
     }
   }
   .page-content {

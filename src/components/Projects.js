@@ -10,7 +10,7 @@ function Projects({ storeProjects }) {
   useEffect(() => {
     getProjects()
   }, [])
-  
+
   // console.log(projects);
     return (
         <div className="project-page">
@@ -21,16 +21,16 @@ function Projects({ storeProjects }) {
                       <figure className="card-front" >
                             <img src={project.image} alt=""/>
                       </figure>
-  
+
                       <figure className="card-back">
                         <h2>{ project.title }</h2>
                         <p>{ project.description }</p>
-  
+
                         <div className="project-links">
                           <a href={ project.source_code }>
                             <img src={sourceCode} alt=""/>
                           </a>
-  
+
                           <a href={ project.live_version }>
                             <img src={livePreview} alt=""/>
                           </a>  
