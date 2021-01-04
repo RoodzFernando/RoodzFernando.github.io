@@ -43,6 +43,7 @@ function Contact() {
                       <textarea name="message" id="message" required cols="30" rows="10" placeholder="Type your message"></textarea>
                     </div>
                 </div>
+                <span className="info">All fields are required.</span>
                 <div className="send-btn">
                   <button>Send</button>
                 </div>

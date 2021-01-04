@@ -26,6 +26,16 @@
     }
   }
 
+  .info {
+    font-style: italic;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
   .send-btn {
     text-align: center;
     button {
