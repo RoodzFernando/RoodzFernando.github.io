@@ -7,6 +7,7 @@ import { store } from './redux/redux';
 import './styles/styles.scss';
 import './styles/components/AsidePage.scss';
 import './styles/components/AsideNav.scss';
+import './styles/components/Project.scss';
 
 ReactDOM.render(
   <React.StrictMode>
