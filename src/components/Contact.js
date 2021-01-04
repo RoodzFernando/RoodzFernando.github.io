@@ -15,23 +15,37 @@ function Contact() {
     }
     return (
         <div className="contact-page">
-            <p>Contact Me section</p>
+            <p>Please leave me a Message!</p>
             <form id="msg-form" onSubmit={handleSubmit}>
                 <div className="name-section inputs">
+                  <div>
                     <label htmlFor="name">Name</label>
-                    <input type="text" placeholder="Full Name"  id="name" name="name"/>
+                  </div>
+                  <div>
+                    <input type="text" placeholder="Full Name"  id="name" name="name" required/>
+                  </div>
                 </div>
 
                 <div className="email-section inputs">
-                    <label htmlFor="email">Email</label>
-                    <input type="email" placeholder="Email"  id="email" name="email"/>
+                  <div>
+                      <label htmlFor="email">Email</label>
+                  </div>
+                  <div>
+                    <input type="email" placeholder="Email"  id="email" name="email" required/>
+                  </div>
                 </div>
 
                 <div className="msg-section inputs">
-                    <label htmlFor="message">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message"></textarea>
+                    <div>
+                      <label htmlFor="message">Message</label>
+                    </div>
+                    <div>
+                      <textarea name="message" id="message" required cols="30" rows="10" placeholder="Type your message"></textarea>
+                    </div>
                 </div>
-                <button>Send</button>
+                <div className="send-btn">
+                  <button>Send</button>
+                </div>
                 <div className="box-info">
                   <span>{ responseMsg }</span>
                 </div>

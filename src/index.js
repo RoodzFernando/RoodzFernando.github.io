@@ -1,15 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import AppRoutes from './routers/AppRoutes';
 import { Provider } from 'react-redux'
 import { store } from './redux/redux';
 import './styles/styles.scss';
-
-// store.subscribe(() => {
-//   console.log(store.getState())
-// })
 
 ReactDOM.render(
   <React.StrictMode>

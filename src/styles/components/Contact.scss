@@ -1,0 +1,45 @@
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  p {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .inputs {
+    label {
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    input {
+      padding: 5px 0;
+    }
+    input,
+    textarea {
+      font-size: 15px;
+      width: 320px;
+      margin-bottom: 15px;
+      padding-left: 7px;
+    }
+  }
+
+  .send-btn {
+    text-align: center;
+    button {
+      width: 150px;
+      background: rgb(15, 102, 233);
+      border: none;
+      padding: 7px;
+      color: #fff;
+      text-transform: uppercase;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background: rgba(15, 102, 233, 0.788);
+      }
+    }
+  }
+}
