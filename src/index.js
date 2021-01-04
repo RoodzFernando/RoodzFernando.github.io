@@ -5,7 +5,8 @@ import AppRoutes from './routers/AppRoutes';
 import { Provider } from 'react-redux'
 import { store } from './redux/redux';
 import './styles/styles.scss';
-import './styles/components/Home.scss';
+import './styles/components/AsidePage.scss';
+import './styles/components/AsideNav.scss';
 
 ReactDOM.render(
   <React.StrictMode>
