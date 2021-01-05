@@ -5,6 +5,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background: #302B27;
+    color: #F5F3F5;
     width: 250px;
     .aside-header {
         display: flex;
@@ -17,7 +19,7 @@
         .social-links {
           display: flex;
             a {
-              border: 1px solid #000;
+              border: 1px solid #fff;
               display: block;
               padding: 6px;
               margin: 2px;
@@ -27,7 +29,7 @@
                     height: 25px;
                   }
                   &:hover {
-                    background: rgba(0, 0, 0, 0.11);
+                    background: #DD6031;
                   }
             }
         }

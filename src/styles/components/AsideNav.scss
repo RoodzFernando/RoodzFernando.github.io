@@ -4,10 +4,13 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background: rgba(128, 128, 128, 0.509);
+    // background: rgba(128, 128, 128, 0.509);
+    // background: #6F73D2;
+    background: #302B27;
+    // background: #A3D5FF;
     width: 9%;
     a {
-        color: #000;
+        color: #F5F3F5;
         transform: rotate(90deg);
         text-transform: uppercase;
         text-decoration: none;
@@ -18,7 +21,9 @@ nav {
         }
     }
     .is-active {
-        color: green;
+        // color: #F5F3F5;
+        color: #DD6031;
+        // color: green;
         text-decoration: underline;
         font-family: 'Pirata One', cursive;
         font-size: 1.8rem;
