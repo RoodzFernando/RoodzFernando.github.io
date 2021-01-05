@@ -12,6 +12,7 @@ function About() {
               learn web development where I have learned 
               some programming languages, which helps me 
               think abstractly, to bring concrete solutions.</p>
+            <div className="signature">Roodz Fernando</div>
           </div>
         </div>
     )
