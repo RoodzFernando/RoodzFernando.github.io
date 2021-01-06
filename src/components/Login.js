@@ -24,9 +24,9 @@ function Login({message, history}) {
         <div className="login-page">
             <form>
                 <h2>Login</h2>
-            <div className="error-msg">
+            { message && <div className="error-msg" style={{'border': '1px solid #fff'}}>
               <span>{message}</span>
-            </div>
+            </div>}
                 <input type="text" placeholder="Username" name="username"  onChange={changehandle} />
                 <input type="password" placeholder="Password" name="password" onChange={changehandle}/>
                 <input type="submit" value="Login" onClick={handleClick} />

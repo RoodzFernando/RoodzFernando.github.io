@@ -30,7 +30,7 @@ function ProjectUpdate({ history, match }) {
     const headers = {
     Authorization: `Bearer ${token}`,
   };
-  projectUpdate(project, headers, id)
+  projectUpdate(project, headers, id, history)
 }
 console.log(project.title)
 

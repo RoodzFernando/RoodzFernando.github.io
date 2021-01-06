@@ -81,7 +81,7 @@ export const projectDeletion = id => {
 
 // update a project
 
-export const projectUpdate = (projectData, headers, id) => {
+export const projectUpdate = (projectData, headers, id, history) => {
   const project = new FormData()
 
   Object.keys(projectData).forEach((key, value) => {
@@ -93,7 +93,9 @@ export const projectUpdate = (projectData, headers, id) => {
   });
 
   axios.put(`${BASE_URL}/projects/${id}`, project, {headers})
-  .then(response => console.log(response))
+  .then(response => {
+    history.push('/dashboard')
+  })
 }
 
 // fetch a single project

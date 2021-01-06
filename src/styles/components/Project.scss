@@ -3,7 +3,6 @@
   @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
 
   .main-content {
-    border: 1px solid red;
     overflow: auto;
     width: 87%;
     padding: 1%;
@@ -19,8 +18,9 @@
       grid-template-columns: repeat(3, 1fr);
       .card {
         perspective: 2000px;
+        box-shadow: 0px 0px 6px 2px #000;
         transform-style: preserve-3d;
-        border: 1px solid blue;
+        // border: 1px solid blue;
         margin-top: 10px;
         margin-bottom: 10px;
         margin-right: 10px;
@@ -38,7 +38,7 @@
           figure {
             height: inherit;
             width: 100%;
-            border: 1px solid #ff0000;
+            // border: 1px solid #ff0000;
           }
 
           .card-front {
@@ -51,6 +51,7 @@
             bottom: 0px;
             backface-visibility: hidden;
             height: 100%;
+            // display: none; // delete this line
             img {
               height: 100%;
               width: 100%;
@@ -62,14 +63,17 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            background: #81A4CD;
+            // background: #81A4CD;
+            background: #fff;
+            // background: #1d3557;
+            color: #000;
             height: 255px;
             margin-left: 0px;
             margin-right: 0px;
             transform: rotateY(180deg);
             backface-visibility: hidden;
             margin-top: 0;
-            margin-bottom: 0;
+            margin-bottom: 5px;
             h2 {
               font-family: 'Rozha One', serif;
             }
@@ -80,36 +84,43 @@
               padding-left: 1%;
               padding-right: 1%;
               font-weight: bold;
+              margin-top: 0;
+              margin-bottom: 0;
             }
-          }
-
-          .project-links {
-            text-align: center;
-            border: 1px solid rgb(88, 3, 77);
-            display: flex;
-            align-items: flex-start;
-            .source-btn {
-              background: #348AA7;
-              img {
-                width: 15%;
-                padding: 3%;
+            // project-links
+            .project-links {
+              // border: 1px solid #000;
+              display: flex;
+              width: 100%;
+              .source-btn {
+                background: #007bff;
+                &:hover {
+                  background: #0069D9;
+                }
               }
-              &:hover {
-                background: rgba(4, 151, 177, 0.884);
+              .preview-btn {
+                background: #5a6268;
+                &:hover {
+                  background: #545b62;
+                }
               }
-            }
-            .preview-btn {
-              background: #5DD39E;
-              &:hover {
-                background: rgba(5, 170, 96, 0.8);
-              }
-            }
-            a {
-              width: 50%;
-              z-index: 10;
-              img {
-                width: 15%;
-                padding: 3%;
+              a {
+                width: 50%;
+                // border: 1px solid red;
+                display: block;
+                padding: 5px;
+                text-align: center;
+                // display: none;
+                // &:first-child {
+                //   border: 1px solid blue;
+                //   background: greenyellow;
+                //   // display: none;
+                //   z-index: 1;
+                // }
+                img {
+                  width: 15%;
+                  height: 100%;
+                }
               }
             }
           }

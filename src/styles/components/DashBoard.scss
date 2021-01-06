@@ -1,7 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+
 .dashboard {
   overflow: auto;
   width: 100%;
   padding-bottom: 20px;
+  .flash-message {
+    padding: 7px;
+    font-family: 'Rozha One', serif;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    background-color: #1e7e34;
+    border-color: #1c7430;
+  }
   h1 {
     text-align: center;
     text-transform: uppercase;

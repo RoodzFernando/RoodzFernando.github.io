@@ -13,6 +13,7 @@ function Dashboard({ storeProjects, message, history }) {
     const confirmation =  confirm("Do you really want to delete this project?")
     if (confirmation) {
       projectDeletion(id)
+      window.location.reload()
     }
   }
 
@@ -23,9 +24,9 @@ function Dashboard({ storeProjects, message, history }) {
   }
   return (
     <div className="dashboard">
-    <div className="flash-message">
+    {message && <div className="flash-message" style={{'border': '1px solid #000'}}>
       <span>{message}</span>
-    </div>
+    </div>}
       <h1>Dashboard</h1>
       <div className="dash-btn">
           <Link to='/new-project' className="add-btn">New Project</Link>
