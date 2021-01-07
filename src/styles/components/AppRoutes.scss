@@ -4,3 +4,55 @@
     height: 100vh;
     justify-content: space-between;
 }
+
+@media (max-width: 480px) {
+  .app-routes {
+    display: flex;
+    flex-direction: column-reverse;
+    .home-page {
+      top: 67px;
+      width: 100vw;
+      height: 100vh;
+    }
+    nav {
+      display: block;
+      background: #302B27;
+      width: 100vw;
+      text-align: center;
+      transform: rotate(0deg);
+      position: fixed;
+      top: 0;
+      a {
+        transform: rotate(0deg);
+        margin: 15px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+    .aside-page {
+      // border: 1px solid yellow;
+      .aside-header {
+        position: fixed;
+        top: 67px;
+        right: 0;
+        background: #302B27;
+        z-index: 10;
+        // display: flex;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        h3 {
+          display: none;
+        }
+        .send-message {
+          width: 35px;
+        }
+      }
+    }
+    footer {
+      // border: 1px solid red;
+      width: 100vw;
+      background: #302B27;
+    }
+  }
+}
