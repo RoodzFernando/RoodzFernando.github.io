@@ -85,4 +85,21 @@
       z-index: 10;
     }
   }
+
+  .about-page {
+    width: 99.5vw;
+    height: 99vh;
+    .about-text {
+      padding: 1.1em;
+      h1 {
+        font-size: 1.2em;
+      }
+      p {
+        font-size: 1.1em;
+      }
+      .signature {
+        font-size: 1em;
+      }
+    }
+  }
 }
