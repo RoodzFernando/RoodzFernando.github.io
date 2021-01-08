@@ -10,6 +10,7 @@ import './styles/components/AsideNav.scss';
 import './styles/components/Project.scss';
 import './styles/components/About.scss';
 import './styles/components/Contact.scss';
+import './styles/components/AppRoutes.scss';
 
 ReactDOM.render(
   <React.StrictMode>
