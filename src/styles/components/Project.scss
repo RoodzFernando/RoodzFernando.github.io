@@ -29,9 +29,9 @@
         transition: transform 1.5s;
         height: 255px;
         // uncomment those lines out
-        // &:hover {
+        &:hover {
           transform: rotateY(180deg);
-        // }
+        }
         .card-inner {
           height: inherit;
           border-radius: 10px;

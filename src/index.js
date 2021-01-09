@@ -11,6 +11,7 @@ import './styles/components/Project.scss';
 import './styles/components/About.scss';
 import './styles/components/Contact.scss';
 import './styles/components/AppRoutes.scss';
+import './styles/components/devices.scss';
 
 ReactDOM.render(
   <React.StrictMode>

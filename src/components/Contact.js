@@ -30,47 +30,49 @@ function Contact() {
     
     return (
         <div className="contact-page">
-            <p>Please leave me a Message!</p>
-            <form id="msg-form" onSubmit={handleSubmit}>
-                <div className="name-section inputs">
-                  <div>
-                    <label htmlFor="name">Name:</label>
-                  </div>
-                  <div>
-                    <input type="text" placeholder="Full Name"  id="name" name="name" required/>
-                  </div>
-                </div>
-
-                <div className="email-section inputs">
-                  <div>
-                      <label htmlFor="email">Email:</label>
-                  </div>
-                  <div>
-                    <input type="email" placeholder="Email"  id="email" name="email" required/>
-                  </div>
-                </div>
-
-                <div className="msg-section inputs">
+            <div className="contact-wrapper">
+              <p>Please leave me a Message!</p>
+              <form id="msg-form" onSubmit={handleSubmit}>
+                  <div className="name-section inputs">
                     <div>
-                      <label htmlFor="message">Message:</label>
+                      <label htmlFor="name">Name:</label>
                     </div>
                     <div>
-                      <textarea name="message" id="message" required cols="30" rows="10" placeholder="Type your message"></textarea>
+                      <input type="text" placeholder="Full Name"  id="name" name="name" required/>
                     </div>
-                </div>
-                <span className="info">All fields are required.</span>
-                <div className="send-btn">
-                  <button>Send</button>
-                </div>
-                {
-                  responseMsg&&
-                <div className="box-info" style={{
-                  'border': '1px solid #fff'
-                }}>
-                  <span>{ responseMsg }</span>
-                </div>
-                }
-            </form>
+                  </div>
+  
+                  <div className="email-section inputs">
+                    <div>
+                        <label htmlFor="email">Email:</label>
+                    </div>
+                    <div>
+                      <input type="email" placeholder="Email"  id="email" name="email" required/>
+                    </div>
+                  </div>
+  
+                  <div className="msg-section inputs">
+                      <div>
+                        <label htmlFor="message">Message:</label>
+                      </div>
+                      <div>
+                        <textarea name="message" id="message" required cols="30" rows="10" placeholder="Type your message"></textarea>
+                      </div>
+                  </div>
+                  <span className="info">All fields are required.</span>
+                  <div className="send-btn">
+                    <button>Send</button>
+                  </div>
+                  {
+                    responseMsg&&
+                  <div className="box-info" style={{
+                    'border': '1px solid #fff'
+                  }}>
+                    <span>{ responseMsg }</span>
+                  </div>
+                  }
+              </form>
+            </div>
         </div>
     )
 }
