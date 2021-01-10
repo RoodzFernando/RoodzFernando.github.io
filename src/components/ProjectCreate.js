@@ -8,6 +8,7 @@ function ProjectCreate({ history }) {
     description: '',
     live_version: '',
     source_code: '',
+    tags: '',
     image: {}
   })
   const handleChange = event => {
@@ -23,10 +24,10 @@ function ProjectCreate({ history }) {
     event.preventDefault()
     const token = localStorage.getItem('token')
     const headers = {
-    Authorization: `Bearer ${token}`,
+    Authorization: `Bearer ${token}`
   };
-    createNewProject(projetInfo, headers, history)
-    // console.log(projetInfo)
+    const tags = projetInfo.tags.split(',')
+    createNewProject(projetInfo, headers, history, tags)
   }
   return (
     <div className="new-project">

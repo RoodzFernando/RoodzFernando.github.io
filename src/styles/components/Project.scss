@@ -31,6 +31,7 @@
         // uncomment those lines out
         &:hover {
           transform: rotateY(180deg);
+          // background: #000;
         }
         .card-inner {
           height: inherit;
@@ -74,6 +75,8 @@
             backface-visibility: hidden;
             margin-top: 0;
             margin-bottom: 5px;
+            // background: #000;
+            cursor: default;
             h2 {
               font-family: 'Rozha One', serif;
             }

@@ -43,7 +43,16 @@ export const loginUser = ({
 
 // Create new Project
 
-export const createNewProject = (projectData, headers, history) => {
+const arrayToHash = (arr, id) => {
+  const elements = [];
+  arr.map(item => (elements.push({'tag': item, project_id: id})));
+  const tagElements = {
+      technology: elements
+  }
+  return tagElements;
+}
+
+export const createNewProject = (projectData, headers, history, tags) => {
   const project = new FormData()
   //  const project = new FormData()
   const { title, description, live_version, source_code } = projectData
@@ -65,8 +74,12 @@ export const createNewProject = (projectData, headers, history) => {
   
   axios.post(`${BASE_URL}/projects`, project, {headers})
     .then(response => {
-      console.log(response)
-      history.push('/dashboard')
+      const projectId = response.data.data.id
+      const projElements = arrayToHash(tags, projectId)
+        axios.post(`${BASE_URL}/technologies`, projElements)
+      .then(answer => {
+        history.push('/dashboard')
+      })
     }).catch(err => console.log(err))
 }
 
