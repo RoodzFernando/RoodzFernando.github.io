@@ -72,7 +72,7 @@ export const createNewProject = (projectData, headers, history, tags) => {
   // append the image
   project.append('image', files[0])
   
-  axios.post(`${BASE_URL}/projects`, project, {headers})
+  axios.post(`${BASE_URL}/projects`, project, {headers,})
     .then(response => {
       const projectId = response.data.data.id
       const projElements = arrayToHash(tags, projectId)
@@ -104,7 +104,7 @@ export const projectUpdate = (projectData, headers, id, history) => {
       project.append(key, projectData[key])
     }
   });
-
+  console.log(projectData['tags'])
   axios.put(`${BASE_URL}/projects/${id}`, project, {headers})
   .then(response => {
     history.push('/dashboard')
@@ -116,6 +116,11 @@ export const projectUpdate = (projectData, headers, id, history) => {
 export const fetchproject = (id, setProject) => {
   axios.get(`${BASE_URL}/projects/${id}`)
   .then(response => {
-    setProject(response.data.data)
+    const tagValue = []
+response.data.data.tags.map(tag =>(tagValue.push(tag.tag)))
+    setProject({
+      ...response.data.data,
+      tags: tagValue.join(',')
+    })
     })
 }

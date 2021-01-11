@@ -17,45 +17,51 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       .card {
-        perspective: 2000px;
-        box-shadow: 0px 0px 6px 2px #000;
-        transform-style: preserve-3d;
-        // border: 1px solid blue;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        margin-right: 10px;
-        cursor: pointer;
-        position: relative;
-        transition: transform 1.5s;
-        height: 255px;
-        // uncomment those lines out
-        &:hover {
-          transform: rotateY(180deg);
-          // background: #000;
-        }
+        height: 16.5rem;
+        margin-bottom: 1.1em;
         .card-inner {
+          perspective: 2000px;
+          box-shadow: 0px 0px 6px 2px #000;
+          transform-style: preserve-3d;
+          margin-top: 10px;
+          margin-bottom: 60px;
+          margin-right: 10px;
+          transition: transform 1.5s;
           height: inherit;
           border-radius: 10px;
-          figure {
-            height: inherit;
-            width: 100%;
-            // border: 1px solid #ff0000;
+          &:hover {
+            transform: rotateY(180deg);
+            .card-front {
+              z-index: -10;
+            }
           }
-
           .card-front {
             position: absolute;
-            margin-left: 0;
-            margin-top: 0px;
-            margin-right: 0px;
-            top: 0px;
-            margin-bottom: 0px;
-            bottom: 0px;
+            height: -webkit-fill-available;
+            width: -webkit-fill-available;
+            margin: 0;
             backface-visibility: hidden;
-            height: 100%;
-            // display: none; // delete this line
+            cursor: pointer;
             img {
               height: 100%;
               width: 100%;
+            }
+            .tags {
+              background: rgba(48, 43, 39, 0.7);
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              color: #fff;
+              span {
+                border: 1px solid #DD6031;
+                border-radius: 5px;
+                margin: 2px;
+                font-size: 1.1em;
+                padding: .5em;
+                font-family: Redressed, serif;
+              }
             }
           }
 
@@ -64,10 +70,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            // background: #81A4CD;
             background: #fff;
-            // background: #1d3557;
-            color: #000;
+            box-shadow: 0px 0px 6px 2px #000;
             height: 255px;
             margin-left: 0px;
             margin-right: 0px;
@@ -75,51 +79,51 @@
             backface-visibility: hidden;
             margin-top: 0;
             margin-bottom: 5px;
-            // background: #000;
-            cursor: default;
-            h2 {
-              font-family: 'Rozha One', serif;
+            .project-card-info {
+              h2 {
+                font-family: 'Rozha One', serif;
+                text-align: center;
+                margin-top: 0.2em;
+                margin-bottom: 0.3em;
+              }
+              .project-description {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                height: 11.6rem;
+                p {
+                  text-align: center;
+                  font-family: 'JetBrains Mono', cursive;
+                  font-size: 1rem;
+                  padding-left: 1%;
+                  padding-right: 1%;
+                  font-weight: bold;
+                  margin-top: 0;
+                  margin-bottom: 0;
+                }
+              }
             }
-            p {
-              text-align: center;
-              font-family: 'JetBrains Mono', cursive;
-              font-size: 1rem;
-              padding-left: 1%;
-              padding-right: 1%;
-              font-weight: bold;
-              margin-top: 0;
-              margin-bottom: 0;
-            }
-            // project-links
             .project-links {
-              // border: 1px solid #000;
               display: flex;
               width: 100%;
+              box-shadow: 0px 0px 6px 2px #000;
+
               .source-btn {
                 background: #007bff;
                 &:hover {
-                  background: #0069D9;
+                  background: #DD6031;
                 }
               }
               .preview-btn {
                 background: #5a6268;
                 &:hover {
-                  background: #545b62;
+                  background: #DD6031;
                 }
               }
               a {
                 width: 50%;
-                // border: 1px solid red;
                 display: block;
                 padding: 5px;
                 text-align: center;
-                // display: none;
-                // &:first-child {
-                //   border: 1px solid blue;
-                //   background: greenyellow;
-                //   // display: none;
-                //   z-index: 1;
-                // }
                 img {
                   width: 15%;
                   height: 100%;

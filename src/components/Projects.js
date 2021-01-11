@@ -11,7 +11,7 @@ function Projects({ storeProjects }) {
     // setProjects(getProjects())
     getProjects()
   }, [])
-  // console.log(projects)
+  console.log(storeProjects)
     return (
       <div className="main-content">
       <h3>Recent works</h3>
@@ -20,23 +20,32 @@ function Projects({ storeProjects }) {
                 storeProjects.map(project => (
                   <div className="card">
                     <div className="card-inner">
-                      <figure className="card-front" >
+                      <figure className="card-front">
                             <img src={project.image} alt=""/>
+                          <div className="tags">
+                            {
+                              project.tags.map(tag =>(
+                                <span>{tag.tag}</span>
+                              ))
+                            }
+                          </div>
                       </figure>
 
                       <figure className="card-back">
-                        <h2>{ project.title }</h2>
-                        <p>{ project.description }</p>
+                        <div className="project-card-info">
+                          <h2>{ project.title }</h2>
+                          <div className="project-description">
+                            <p>{ project.description }</p>
+                          </div>
+                        </div>
 
                         <div className="project-links">
                             <a className="source-btn link-btn" href={ project.source_code } rel="noreferrer" target="_blank">
                               <img src={sourceCode} alt=""/>
-                              {/* Source code */}
                             </a>
 
                             <a className="preview-btn link-btn" href={ project.live_version } rel="noreferrer" target="_blank">
                               <img src={livePreview} alt=""/>
-                              {/* Live Preview */}
                             </a> 
                         </div>
                       </figure>

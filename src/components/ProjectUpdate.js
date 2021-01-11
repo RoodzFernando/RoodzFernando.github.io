@@ -9,18 +9,20 @@ function ProjectUpdate({ history, match }) {
     description: '',
     live_version: '',
     source_code: '',
-    image: {}
+    image: {},
+    tags: '',
   })
 
   useEffect(() => {
     fetchproject(id, setProject)
   }, [])
+  // console.log(project)
   const handleChange = event => {
     const { name, value, files } = event.target
       setProject({
         ...project,
         [name]: value,
-        image: { files }
+        image: { files },
       })
   }
 
@@ -32,7 +34,6 @@ function ProjectUpdate({ history, match }) {
   };
   projectUpdate(project, headers, id, history)
 }
-console.log(project.title)
 
   return (
     <div className="update-page">
@@ -42,6 +43,7 @@ console.log(project.title)
         description={project.description}
         live_version={project.live_version}
         source_code={project.source_code}
+        tags={project.tags}
         text='Update' 
         handleSubmit={handleSubmit} 
         handleChange={handleChange} 
