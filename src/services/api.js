@@ -1,24 +1,21 @@
 import axios from 'axios';
 import {
   requestStart,
-  requestSuccess,
   requestFail,
   deleteProject,
   store
 } from '../redux/redux';
 
-const BASE_URL = 'http://localhost:3001'
+// const BASE_URL = 'http://localhost:3001'
+const BASE_URL = 'https://api-frf-portfolio.herokuapp.com'
 // Fetch the projects
-export const getProjects = () => {
+export const getProjects = (setProjects) => {
   axios.get(`${BASE_URL}/projects`).then(
     response => {
       store.dispatch(requestStart())
       return response
     }).then(responseData => {
-      // console.log(responseData.data);
-    store.dispatch(requestSuccess(responseData.data))
-    // setProjects((responseData.data))
-    // store.dispatch(requestSuccess())
+    setProjects((responseData.data))
   })
 }
 
@@ -54,7 +51,6 @@ const arrayToHash = (arr, id) => {
 
 export const createNewProject = (projectData, headers, history, tags) => {
   const project = new FormData()
-  //  const project = new FormData()
   const { title, description, live_version, source_code } = projectData
   const { files } = projectData.image
 

@@ -1,12 +1,13 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { getProjects, projectDeletion } from '../services/api'
 
 
 function Dashboard({ storeProjects, message, history }) {
+  const [projects, setProjects] = useState([])
    useEffect(() => {
-    getProjects()
+    getProjects(setProjects)
   }, [])
   const projectDelete = id => {
     // eslint-disable-next-line no-restricted-globals
@@ -36,7 +37,7 @@ function Dashboard({ storeProjects, message, history }) {
       </div>
       <div className="page-content">
         {
-            storeProjects.map(project => (
+            projects.map(project => (
           <div key={project.id} className="project-card" style={{
             'height': '250px',
             'backgroundImage': `url(${project.image})`,

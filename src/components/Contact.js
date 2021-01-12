@@ -9,20 +9,7 @@ function Contact() {
         emailjs.sendForm('service_8d5zpkp', 'contact_form', 'msg-form', 'user_DP6MP9QTuR99lXDoMUXCK')
         .then( response => {
           setResponseMsg('Message sent. Thanks for Reaching out!')
-          for (const elem of form) {
-            switch (elem.type) {
-              case 'text':
-                elem.value = ''
-                break
-              case 'email':
-                elem.value = ''
-                break
-              case 'textarea':
-                elem.value = ''
-                break
-              default:
-            }
-          }
+         if (form !== null) {form.reset()}
         }, error => {
           setResponseMsg(`Message not sent. ${error}`)
         });

@@ -1,23 +1,21 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react'
-import { connect } from 'react-redux'
 import { getProjects } from '../services/api'
 import sourceCode from '../images/source-code.svg'
 import livePreview from '../images/forward.svg'
 
-function Projects({ storeProjects }) {
+function Projects() {
   const [projects, setProjects] = useState([])
   useEffect(() => {
-    // setProjects(getProjects())
-    getProjects()
+    getProjects(setProjects)
   }, [])
-  console.log(storeProjects)
+  console.log(projects)
     return (
       <div className="main-content">
       <h3>Recent works</h3>
         <div className="project-page">
               {
-                storeProjects.map(project => (
+                projects.map(project => (
                   <div className="card">
                     <div className="card-inner">
                       <figure className="card-front">
@@ -58,10 +56,4 @@ function Projects({ storeProjects }) {
     )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    storeProjects: state.projects,
-  }
-}
-
-export default connect(mapStateToProps)(Projects)
+export default Projects
