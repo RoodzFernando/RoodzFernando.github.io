@@ -9,8 +9,6 @@ import {
 // const BASE_URL = 'http://localhost:3001'
 const BASE_URL = 'https://api-frf-portfolio.herokuapp.com'
 
-// let headers = new Headers()
-// headers.append('GET', 'POST', 'OPTIONS');
 // Fetch the projects
 export const getProjects = (setProjects) => {
   axios.get(`${BASE_URL}/projects`).then(
@@ -21,13 +19,6 @@ export const getProjects = (setProjects) => {
     setProjects((responseData.data))
   })
 }
-// const options = {
-//   method: 'POST',
-//   headers: { 'content-type': 'application/x-www-form-urlencoded' },
-//   data: qs.stringify(data),
-//   url,
-// };
-// axios(options);
 
 // Login User
 export const loginUser = ({

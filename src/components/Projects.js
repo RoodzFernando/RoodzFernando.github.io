@@ -10,7 +10,6 @@ function Projects() {
   useEffect(() => {
     getProjects(setProjects)
   }, [])
-  console.log(projects)
   const token = localStorage.getItem('token')
     return (
       <div className="main-content">
@@ -18,14 +17,14 @@ function Projects() {
         <div className="project-page">
               {
                 projects.map(project => (
-                  <div className="card">
+                  <div key={project.id} className="card">
                     <div className="card-inner">
                       <figure className="card-front">
                             <img src={project.image} alt=""/>
                           <div className="tags">
                             {
                               project.tags.map(tag =>(
-                                <span>{tag.tag}</span>
+                                <span key={tag.id}>{tag.tag}</span>
                               ))
                             }
                           </div>
