@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  p {
+    text-align: center;
+    font-weight: bold;
+    font-family: Redressed, serif;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  form {
+    .inputs {
+    label {
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 10px;
+      font-family: Roboto, serif;
+    }
+    input {
+      padding: 5px 0;
+    }
+    textarea {
+      padding-top: 7px;
+    }
+    input,
+    textarea {
+      font-family: Roboto, serif;
+      font-size: 15px;
+      width: 320px;
+      margin-bottom: 15px;
+      padding-left: 7px;
+    }
+  }
+  }
+
+  .info {
+    font-style: italic;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .send-btn {
+    text-align: center;
+    button {
+      width: 150px;
+      background: rgb(15, 102, 233);
+      border: none;
+      padding: 7px;
+      color: #fff;
+      font-family: Redressed, serif;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background: rgba(15, 102, 233, 0.788);
+      }
+    }
+  }
+
+  .box-info {
+    margin-top: 15px;
+    text-align: center;
+    background: #4ecdc4;
+    color: #10002b;
+    font-family: Redressed, serif;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+  }
+}

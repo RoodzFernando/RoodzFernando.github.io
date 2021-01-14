@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+
+.dashboard {
+  overflow: auto;
+  width: 100%;
+  padding-bottom: 20px;
+  .flash-message {
+    padding: 7px;
+    font-family: 'Rozha One', serif;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    background-color: #1e7e34;
+    border-color: #1c7430;
+  }
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .dash-btn {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2%;
+    .add-btn {
+      text-decoration: none;
+      background: rgb(13, 2, 207);
+      color: #fff;
+      text-transform: uppercase;
+      padding: 6px;
+      border-radius: 5px;
+      &:hover {
+        background: rgba(18, 58, 238, 0.87);
+      }
+    }
+    button {
+      padding: 6px;
+      margin-left: 15px;
+      background: rgb(233, 4, 4);
+      border: none;
+      cursor: pointer;
+      width: 110px;
+      height: 30px;
+      color: #fff;
+      border-radius: 5px;
+      text-transform: uppercase;
+      &:hover {
+        background: rgba(233, 4, 4, 0.753);
+      }
+    }
+  }
+  .page-content {
+    padding: 0 15px 0 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    text-align: center;
+    .project-card {
+      border: 1px solid transparent;
+      border-radius: 5px;
+      width: 100%;
+      color: #fff;
+      h2 {
+        text-transform: uppercase;
+        text-shadow: 0 0 3px #000;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+      a {
+        border: 1px solid transparent;
+        background: rgba(16, 143, 228, 0.747);
+        display: inline-block;
+        border-radius: 5px;
+        width: 45px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #fff;
+        margin-right: 15px;
+        font-size: 12px;
+        padding: 5px;
+        &:hover {
+          background: rgba(9, 5, 226, 0.836);
+        }
+      }
+      button {
+        cursor: pointer;
+        background: rgba(230, 7, 7, 0.685);
+        color: #fff;
+        border: 1px solid transparent;
+        padding: 4px;
+        text-transform: uppercase;
+        border-radius: 5px;
+        font-size: 12px;
+        &:hover {
+          background: rgb(247, 21, 21);
+        }
+      }
+    }
+  }
+}

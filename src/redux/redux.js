@@ -9,6 +9,7 @@ const initialState = {
 const projectRequestStart = 'PROJECT_REQUEST_START'
 const projectRequestSuccess = 'PROJECT_REQUEST_SUCCESS'
 const projectRequestFail = 'PROJECT_REQUEST_FAIL'
+const projectDelete = 'DELETE_PROJECT'
 // Actions generators
 export const requestStart = () => {
   return {
@@ -16,7 +17,7 @@ export const requestStart = () => {
   }
 }
 
-export const requestSuccess = (data) => {
+export const requestSuccess = data => {
   return {
     type: projectRequestSuccess,
     payload: data,
@@ -27,6 +28,13 @@ export const requestFail = (error) => {
   return {
     type: projectRequestFail,
     payload: error
+  }
+}
+
+export const deleteProject = msg => {
+  return {
+    type: projectDelete,
+    payload: msg
   }
 }
 
@@ -50,6 +58,11 @@ const projectsReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
+        msg: action.payload
+      }
+    case projectDelete:
+      return {
+        ...state,
         msg: action.payload
       }
     default:

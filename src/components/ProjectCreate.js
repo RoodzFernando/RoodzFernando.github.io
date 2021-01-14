@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import { createNewProject } from '../services/api'
+import Form from './Form'
 
-function ProjectCreate() {
+function ProjectCreate({ history }) {
   const [projetInfo, setProjectInfo] = useState({
     title: '',
     description: '',
     live_version: '',
     source_code: '',
+    tags: '',
     image: {}
   })
   const handleChange = event => {
@@ -22,22 +24,15 @@ function ProjectCreate() {
     event.preventDefault()
     const token = localStorage.getItem('token')
     const headers = {
-    Authorization: `Bearer ${token}`,
+    Authorization: `Bearer ${token}`
   };
-    createNewProject(projetInfo, headers)
-    // console.log(projetInfo)
+    const tags = projetInfo.tags.split(',')
+    createNewProject(projetInfo, headers, history, tags)
   }
   return (
     <div className="new-project">
-      <form encType="multipart/form-data" method="post">
       <h1>Add a new Project</h1>
-        <input type="text" name="title" onChange={handleChange} placeholder="Title"/>
-        <textarea name="description" onChange={handleChange} id="" cols="30" rows="10" placeholder="Description"></textarea>
-        <input type="text" onChange={handleChange} name="live_version" placeholder="Live Version"/>
-        <input type="text" onChange={handleChange} name="source_code" placeholder="Source Code"/>
-        <input type="file" name="image" onChange={handleChange} accept="image/png, image/jpeg"/>
-        <input type="submit" onClick={handleSubmit} value="Save"/>
-      </form>
+      <Form text='Save' handleChange={handleChange} handleSubmit={handleSubmit} />
     </div>
   )
 }

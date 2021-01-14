@@ -9,6 +9,7 @@ import AsideNav from '../components/AsideNav'
 import Login from '../components/Login'
 import Dashboard from '../components/Dashboard'
 import ProjectCreate from '../components/ProjectCreate'
+import ProjectUpdate from '../components/ProjectUpdate'
 
 function AppRoutes() {
     return (
@@ -23,6 +24,7 @@ function AppRoutes() {
                     <Route path="/login" component={Login} />
                     <Route path="/dashboard" component={Dashboard} />
                     <Route path="/new-project" component={ProjectCreate} />
+                    <Route path="/update/:id" component={ProjectUpdate} />
                 </Switch>
                 <AsideNav />
             </Router>

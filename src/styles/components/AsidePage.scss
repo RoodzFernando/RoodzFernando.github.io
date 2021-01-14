@@ -1,26 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+
 .aside-page {
-    border: 1px solid #000;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background: #302B27;
+    color: #F5F3F5;
+    width: 250px;
     .aside-header {
         display: flex;
         flex-direction: column;
         align-items: center;
+        h3 {
+          font-family: Redressed,serif;
+          font-size: 1.7rem;
+        }
         .social-links {
+          display: flex;
             a {
-                img {
-                    height: 35px;
-                }
+              border: 1px solid #fff;
+              display: block;
+              padding: 6px;
+              margin: 2px;
+              height: 25px;
+              border-radius:  50%;
+              img {
+                    height: 25px;
+                  }
+                  &:hover {
+                    background: #DD6031;
+                  }
             }
         }
         .send-message {
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h3 {
+              text-align: center;
+            }
             a {
-                img {
-                    height: 35px;
-                }
+              img {
+                height: 30px;
+              }
             }
         }
+    }
+    footer {
+      p {
+        font-family: Redressed, serif;
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-align: center;
+      }
     }
 }
