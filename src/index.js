@@ -1,12 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AppRoutes from './routers/AppRoutes';
+import { Provider } from 'react-redux'
+import { store } from './redux/redux';
+import './styles/styles.scss';
+import './styles/components/Home.scss';
+import './styles/components/AsidePage.scss';
+import './styles/components/AsideNav.scss';
+import './styles/components/Project.scss';
+import './styles/components/About.scss';
+import './styles/components/Contact.scss';
+import './styles/components/DashBoard.scss';
+import './styles/components/ProjectCreate.scss';
+import './styles/components/ProjectUpdate.scss';
+import './styles/components/AppRoutes.scss';
+import './styles/components/Login.scss';
+import './styles/components/devices.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <AppRoutes />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: #302B27;
+    width: 9%;
+    a {
+        color: #F5F3F5;
+        transform: rotate(90deg);
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: Audiowide, serif;
+        &:first-child {
+          display: inline-block;
+          text-align: center;
+        }
+    }
+    .is-active {
+        color: #DD6031;
+        text-decoration: underline;
+        font-family: 'Pirata One', cursive;
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+@import '../base/input';
+
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+
+  form {
+    h2 {
+      font-family: Redressed, cursive;
+      font-size: 1.9rem;
+      text-decoration: underline;
+    }
+    .error-msg {
+      margin-bottom: 15px;
+      width: 150%;
+      text-align: center;
+      padding: 7px;
+      font-family: 'Rozha One', serif;
+      font-size: 0.9rem;
+      border-radius: 5px;
+      color: #fff;
+      background-color: #bd2130;
+    }
+
+    @include form-style;
+  }
+}

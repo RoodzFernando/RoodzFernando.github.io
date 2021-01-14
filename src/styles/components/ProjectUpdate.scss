@@ -1,0 +1,14 @@
+@import '../base/input';
+
+.update-page {
+  form {
+    input[type="file"] {
+      margin-bottom: 15px;
+    }
+    @include form-style;
+    textarea {
+      width: 153%;
+      margin-bottom: 15px;
+    }
+  }
+}
