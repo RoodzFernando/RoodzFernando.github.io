@@ -4,17 +4,31 @@ import React, { useState } from 'react'
 function Contact() {
     const [responseMsg, setResponseMsg] = useState('')
     const form = document.getElementById('msg-form')
+    const [formState, setFormState] = useState({
+      name: '',
+      email: '',
+      message: ''
+    })
+    const handleChange = event => {
+      const {name, value} = event.target
+      setFormState({
+        [name]: value
+      })
+    }
     const handleSubmit = event => {
         event.preventDefault()
         emailjs.sendForm('service_8d5zpkp', 'contact_form', 'msg-form', 'user_DP6MP9QTuR99lXDoMUXCK')
         .then( response => {
           setResponseMsg('Message sent. Thanks for Reaching out!')
-         if (form !== null) {form.reset()}
+          setFormState({
+            name: '',
+            email: '',
+            message: ''
+          })
         }, error => {
           setResponseMsg(`Message not sent. ${error}`)
         });
     }
-    
     return (
         <div className="contact-page">
             <div className="contact-wrapper">
@@ -25,7 +39,7 @@ function Contact() {
                       <label htmlFor="name">Name:</label>
                     </div>
                     <div>
-                      <input type="text" placeholder="Full Name"  id="name" name="name" required/>
+                      <input type="text" onChange={handleChange} placeholder="Full Name"  id="name" name="name" value={formState.name} required/>
                     </div>
                   </div>
   
@@ -34,7 +48,7 @@ function Contact() {
                         <label htmlFor="email">Email:</label>
                     </div>
                     <div>
-                      <input type="email" placeholder="Email"  id="email" name="email" required/>
+                      <input type="email" onChange={handleChange} placeholder="Email"  id="email" name="email" value={formState.email} required/>
                     </div>
                   </div>
   
@@ -43,7 +57,7 @@ function Contact() {
                         <label htmlFor="message">Message:</label>
                       </div>
                       <div>
-                        <textarea name="message" id="message" required cols="30" rows="10" placeholder="Type your message"></textarea>
+                        <textarea name="message" onChange={handleChange} id="message" required cols="30" rows="10" value={formState.message} placeholder="Type your message"></textarea>
                       </div>
                   </div>
                   <span className="info">All fields are required.</span>
