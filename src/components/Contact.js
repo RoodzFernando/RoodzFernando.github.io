@@ -1,14 +1,17 @@
-import emailjs from 'emailjs-com';
 import React, { useState } from 'react'
+import { HashLoader } from 'react-spinners'
+import emailjs from 'emailjs-com';
 
 function Contact() {
     const [responseMsg, setResponseMsg] = useState('')
+    const [color] = useState("#DD6031");
     const form = document.getElementById('msg-form')
     const [formState, setFormState] = useState({
       name: '',
       email: '',
       message: ''
     })
+    const [loaderState, setLoaderState] = useState(false)
     const handleChange = event => {
       const {name, value} = event.target
       setFormState({
@@ -17,6 +20,7 @@ function Contact() {
     }
     const handleSubmit = event => {
         event.preventDefault()
+        setLoaderState(!loaderState)
         emailjs.sendForm('service_8d5zpkp', 'contact_form', 'msg-form', 'user_DP6MP9QTuR99lXDoMUXCK')
         .then( response => {
           setResponseMsg('Message sent. Thanks for Reaching out!')
@@ -25,12 +29,20 @@ function Contact() {
             email: '',
             message: ''
           })
+          setLoaderState(false)
         }, error => {
           setResponseMsg(`Message not sent. ${error}`)
         });
     }
     return (
         <div className="contact-page">
+        {loaderState && <div className="loader">
+          <HashLoader 
+            loading={loaderState}
+            color={color}
+          >
+          </HashLoader>
+        </div>}
             <div className="contact-wrapper">
               <p>Please leave me a Message!</p>
               <form id="msg-form" onSubmit={handleSubmit}>

@@ -134,6 +134,12 @@
     margin-top: 4.9em;
     width: 100vw;
     height: 90vh;
+    .loader {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+    }
     form {
       width: 100vw;
       height: 70vh;
