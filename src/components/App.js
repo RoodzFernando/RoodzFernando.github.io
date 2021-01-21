@@ -1,8 +1,10 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import img from '../images/img-background.jpg';
+import pageTitle from '../services/tile';
 
 function App() {
-   
+    useEffect(() => pageTitle('Home'))
+
     return (
       <div className="home-page">
         <div className="intro">

@@ -6,12 +6,16 @@
     overflow: auto;
     width: 87%;
     padding: 1%;
-    h3 {
-      font-family: Redressed, cursive;
-      font-size: 1.8rem;
-      text-decoration: underline;
-      margin-top: 0;
-      margin-bottom: 0;
+    .project-head {
+      display: flex;
+      justify-content: space-between;
+      h3 {
+        font-family: Redressed, cursive;
+        font-size: 1.8rem;
+        text-decoration: underline;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
     }
     .project-page {
       display: grid;

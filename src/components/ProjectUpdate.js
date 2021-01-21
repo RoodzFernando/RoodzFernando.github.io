@@ -15,7 +15,7 @@ function ProjectUpdate({ history, match }) {
 
   useEffect(() => {
     fetchproject(id, setProject)
-  }, [])
+  }, [id])
   // console.log(project)
   const handleChange = event => {
     const { name, value, files } = event.target

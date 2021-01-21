@@ -1,6 +1,9 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import pageTitle from '../services/tile'
 
 function About() {
+      useEffect(() => pageTitle('About Me'))
+
     return (
         <div className="about-page">
           <div className="about-text">

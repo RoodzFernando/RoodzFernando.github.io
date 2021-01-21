@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { HashLoader } from 'react-spinners'
 import emailjs from 'emailjs-com';
+import pageTitle from '../services/tile';
 
 function Contact() {
     const [responseMsg, setResponseMsg] = useState('')
@@ -18,6 +19,7 @@ function Contact() {
         [name]: value
       })
     }
+    useEffect(() => pageTitle('Contact'))
     const handleSubmit = event => {
         event.preventDefault()
         setLoaderState(!loaderState)
