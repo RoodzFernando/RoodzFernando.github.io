@@ -3,8 +3,6 @@ import img from '../images/img-background.jpg';
 import pageTitle from '../services/tile';
 
 function App() {
-    useEffect(() => pageTitle('Home'))
-
     return (
       <div className="container home-page">
         <div className="intro">

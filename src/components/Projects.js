@@ -1,62 +1,93 @@
 import React, { useEffect, useState } from 'react'
-import { getProjects } from '../services/api'
+import { fetchproject, getProjects } from '../services/api'
 import sourceCode from '../images/source-code.svg'
 import livePreview from '../images/forward.svg'
 import { Link } from 'react-router-dom'
-import pageTitle from '../services/tile'
 
 function Projects() {
   const [projects, setProjects] = useState([])
+  const [project, setProject] = useState({})
   useEffect(() => {
     getProjects(setProjects)
-    pageTitle('Projects')
   }, [])
-  const token = localStorage.getItem('token')
+  const handleClick = (id, setProject) => {
+    // event.preventDefault()
+    fetchproject(id, setProject)
+  }
+  // const token = localStorage.getItem('token')
+  console.log(project)
     return (
-      <div className="main-content">
-      <div className="project-head">
-        <h3>Recent works</h3> { token && <Link to='/dashboard'>DashBoard</Link>}
-      </div>
-        <div className="project-page">
-              {
-                projects.map(project => (
-                  <div key={project.id} className="card">
-                    <div className="card-inner">
-                      <figure className="card-front">
-                            <img src={project.image} alt=""/>
-                          <div className="tags">
-                            {
-                              project.tags.map(tag =>(
-                                <span key={tag.id}>{tag.tag}</span>
-                              ))
-                            }
-                          </div>
-                      </figure>
-
-                      <figure className="card-back">
-                        <div className="project-card-info">
-                          <h2>{ project.title }</h2>
-                          <div className="project-description">
-                            <p>{ project.description }</p>
-                          </div>
-                        </div>
-
-                        <div className="project-links">
-                            <a className="source-btn link-btn" href={ project.source_code } rel="noreferrer" target="_blank">
-                              <img src={sourceCode} alt=""/>
-                            </a>
-
-                            <a className="preview-btn link-btn" href={ project.live_version } rel="noreferrer" target="_blank">
-                              <img src={livePreview} alt=""/>
-                            </a> 
-                        </div>
-                      </figure>
-                    </div>
-                  </div>
-                ))
-              }
-      </div>
-      </div>
+      <>
+      <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <h3>My Recent Works</h3>
+            </div>
+          </div>
+        <div className="row">
+          {
+            projects.map(project => (
+              <>
+              <div className="col-lg-4" style={{'border': '1px solid blue'}}>
+                <img src={project.image} alt="" style={{'width': '100%', 'height': '60%'}} />
+                <h2>{ project.title }</h2>
+                {
+                  project.tags.map(tag => (
+                    <span>{tag.tag}</span>
+                  ))
+                }
+                <button onClick={() => {
+                  handleClick(project.id, setProject)
+                  const projectDetail = document.getElementsByClassName('project-detail')[0]
+                  projectDetail.style = 'block'
+                  }} >See Project</button>
+              </div>
+              </>
+            ))
+          }
+        </div>
+        </div>
+        <div className="container project-detail" style={{'display': 'none'}}>
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="row">
+                <div className="col-lg-3">
+                  <button onClick={ () => {
+                    const hideElement = document.getElementsByClassName('project-detail')[0]
+                    hideElement.style.display = 'none'
+                  } } >X</button>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-lg-12">
+                  <img src={project.image} alt=""/>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-lg-8">
+                  <h2>
+                    {project.title}
+                  </h2>
+                  { project.tags &&
+                    project.tags.split(',').map(tag => (
+                      <span>{tag}</span>
+                    ))
+                  }
+                </div>
+                <div className="col-lg-4">
+                  <a href={project.live_version}>See live</a>
+                  <a href={project.source_code}>See Source</a>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-lg-12">
+                  <p>{ project.description }</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </>
     )
 }
 
