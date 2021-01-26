@@ -16,7 +16,6 @@ function AppRoutes() {
     return (
         <div className="app-routes">
             <Router>
-                <Navigation />
                 <App />
                 <Projects />
                 <About />
