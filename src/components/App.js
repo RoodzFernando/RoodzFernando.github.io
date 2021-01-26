@@ -6,7 +6,7 @@ function App() {
     useEffect(() => pageTitle('Home'))
 
     return (
-      <div className="home-page">
+      <div className="container home-page">
         <div className="intro">
           <h1>Hello, I am Roodz Fernando Fleurant</h1>
 
@@ -16,9 +16,9 @@ function App() {
           </p>
 
         </div>
-          <div className="img-back">
+          {/* <div className="img-back">
             <img src={img} alt=""/>
-          </div>
+          </div> */}
       </div>
     )
 }

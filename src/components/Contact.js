@@ -27,7 +27,8 @@ function Contact() {
         .then( response => {
           setResponseMsg('Message sent. Thanks for Reaching out!')
           setFormState({
-            name: '',
+            firstName: '',
+            lastName: '',
             email: '',
             message: ''
           })
@@ -37,57 +38,69 @@ function Contact() {
         });
     }
     return (
-        <div className="contact-page">
-        {loaderState && <div className="loader">
-          <HashLoader 
-            loading={loaderState}
-            color={color}
-          >
-          </HashLoader>
-        </div>}
-            <div className="contact-wrapper">
-              <p>Please leave me a Message!</p>
-              <form id="msg-form" onSubmit={handleSubmit}>
-                  <div className="name-section inputs">
-                    <div>
-                      <label htmlFor="name">Name:</label>
-                    </div>
-                    <div>
-                      <input type="text" onChange={handleChange} placeholder="Full Name"  id="name" name="name" value={formState.name} required/>
-                    </div>
-                  </div>
-  
-                  <div className="email-section inputs">
-                    <div>
-                        <label htmlFor="email">Email:</label>
-                    </div>
-                    <div>
-                      <input type="email" onChange={handleChange} placeholder="Email"  id="email" name="email" value={formState.email} required/>
-                    </div>
-                  </div>
-  
-                  <div className="msg-section inputs">
-                      <div>
-                        <label htmlFor="message">Message:</label>
-                      </div>
-                      <div>
-                        <textarea name="message" onChange={handleChange} id="message" required cols="30" rows="10" value={formState.message} placeholder="Type your message"></textarea>
-                      </div>
-                  </div>
-                  <span className="info">All fields are required.</span>
-                  <div className="send-btn">
-                    <button>Send</button>
-                  </div>
-                  {
-                    responseMsg&&
-                  <div className="box-info" style={{
-                    'border': '1px solid #fff'
-                  }}>
-                    <span>{ responseMsg }</span>
-                  </div>
-                  }
-              </form>
+        <div className="container">
+          <div className="row">
+          {/* column 1 */}
+            <div className="col-lg-6">
+              <h3>I am always interested in hearing about new projects, so if you'd like to chat drop me a line.</h3>
             </div>
+            {/* column 2 */}
+            <div className="col-lg-6">
+              <div className="contact-page">
+          {loaderState && <div className="loader">
+            <HashLoader 
+              loading={loaderState}
+              color={color}
+            >
+            </HashLoader>
+          </div>}
+              <div className="contact-wrapper">
+                <form id="msg-form" onSubmit={handleSubmit}>
+                    <div className="firstname-section inputs">
+                      <div className="row">
+                      {/* column 1 */}
+                        <div className="col-lg-6">
+                          <div>
+                            <input className="form-control" type="text" onChange={handleChange} placeholder="First Name"  id="name" name="name" value={formState.firstName} required/>
+                          </div>
+                        </div>
+                        {/* column 2 */}
+                        <div className="col-lg-6">
+                          <div>
+                            <input className="form-control" type="text" onChange={handleChange} placeholder="Last Name"  id="name" name="name" value={formState.lastName} required/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+    
+                    <div className="email-section inputs">
+                      <div>
+                        <input className="form-control" type="email" onChange={handleChange} placeholder="Email"  id="email" name="email" value={formState.email} required/>
+                      </div>
+                    </div>
+    
+                    <div className="msg-section inputs">
+                        <div>
+                          <textarea className="form-control" name="message" onChange={handleChange} id="message" required cols="30" rows="10" value={formState.message} placeholder="Type your message"></textarea>
+                        </div>
+                    </div>
+                    <div className="send-btn">
+                      <button className="btn btn-primary">Get in touch</button>
+                    </div>
+                    {
+                      responseMsg&&
+                    <div className="box-info" style={{
+                      'border': '1px solid #fff'
+                    }}>
+                      <span>{ responseMsg }</span>
+                    </div>
+                    }
+                </form>
+              </div>
+          </div>
+            </div>
+          </div>
         </div>
     )
 }

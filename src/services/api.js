@@ -6,8 +6,8 @@ import {
   store
 } from '../redux/redux';
 
-// const BASE_URL = 'http://localhost:3001'
-const BASE_URL = 'https://api-frf-portfolio.herokuapp.com'
+const BASE_URL = 'http://localhost:3001'
+// const BASE_URL = 'https://api-frf-portfolio.herokuapp.com'
 
 // Fetch the projects
 export const getProjects = (setProjects) => {
