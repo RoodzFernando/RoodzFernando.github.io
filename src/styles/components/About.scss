@@ -1,33 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import '../base/variables.scss';
 
 .about-page {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  // border: 1px solid blue;
   .about-text {
-    align-self: center;
-    border: 2px solid #302B27;
-    box-shadow: 0px 0px 6px 2px #000;
-    width: 50%;
-    padding: 50px;
-    border-radius: 20px;
+    // border: 1px solid red;
     h1 {
-      font-family: Redressed, cursive;
-      font-size: 2.5rem;
+      color: $blue;
     }
     p {
-      font-family: Dosis, cursive;
-      font-size: 1.3rem;
-      font-weight: bold;
+      color: $blue;
+
+      position: static;
+      width: 62%;
+      left: 0px;
+      top: 72px;
+
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 32px;
+      text-align: center;
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+      margin: 0px 24px;
     }
-    .signature {
-      text-align: right;
-      font-family: 'Great Vibes', cursive;
-      font-size: 1.5rem;
-      font-weight: bold;
+    a {
+      background-color: $green;
+      border: 1px solid $green;
+    }
+  }
+}
+
+// skills page
+.skills-tab {
+  // border: 1px solid blue;
+  padding: 0;
+  // [class~="col-lg-4"] {
+      // border: 1px solid indigo;
+    // }
+  // margin: auto 0;
+  // padding-left: 14em;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  .skills-card {
+    // border: 1px solid maroon;
+    height: 18em;
+    // width: 250px !important;
+    border: 1px solid $grey-border;
+    background: $grey;
+    // background: indigo;
+    border-radius: 5px;
+    padding: 0;
+    
+    // text-align: center;
+    // display: flex;
+    // justify-content: center;
+    .tags {
+      // border: 1px solid blue;
+      // text-align: center;
+      display: flex;
+      justify-content: center;
+      .lang-tag {
+        // border: 1px solid #000;
+        padding: 4px 5px 4px 5px;
+        margin: 12px 5px 20px 5px;
+        color: $green;
+        background: $white;
+        border: 1px solid $white;
+        border-radius: 5px;
+      }
     }
   }
 }

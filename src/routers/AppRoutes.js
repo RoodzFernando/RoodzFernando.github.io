@@ -10,7 +10,6 @@ import Login from '../components/Login'
 import Dashboard from '../components/Dashboard'
 import ProjectCreate from '../components/ProjectCreate'
 import ProjectUpdate from '../components/ProjectUpdate'
-import Skills from '../components/Skills'
 
 function AppRoutes() {
     return (
@@ -19,7 +18,6 @@ function AppRoutes() {
                 <App />
                 <Projects />
                 <About />
-                <Skills />
                 <Contact />
                 <Switch>
                     {/* <Route path="/" component={App} exact={true} /> */}
