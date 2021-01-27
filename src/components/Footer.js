@@ -5,7 +5,9 @@ function Footer() {
   return (
     <>
       <footer>
-          <SocialLinks />
+          <div className="col-lg-12 mb-4">
+            <SocialLinks />
+          </div>
       </footer>
     </>
   )

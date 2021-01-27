@@ -12,7 +12,7 @@ import './styles/components/Home.scss';
 // import './styles/components/AsideNav.scss';
 // import './styles/components/Project.scss';
 import './styles/components/About.scss';
-// import './styles/components/Contact.scss';
+import './styles/components/Contact.scss';
 // import './styles/components/DashBoard.scss';
 // import './styles/components/ProjectCreate.scss';
 // import './styles/components/ProjectUpdate.scss';

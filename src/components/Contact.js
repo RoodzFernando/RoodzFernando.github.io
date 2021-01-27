@@ -7,7 +7,8 @@ function Contact() {
     const [color] = useState("#DD6031");
     const form = document.getElementById('msg-form')
     const [formState, setFormState] = useState({
-      name: '',
+      firstName: '',
+      lastName: '',
       email: '',
       message: ''
     })
@@ -36,22 +37,27 @@ function Contact() {
         });
     }
     return (
-        <div className="container">
-          <div className="row">
-          {/* column 1 */}
-            <div className="col-lg-6">
-              <h3>I am always interested in hearing about new projects, so if you'd like to chat drop me a line.</h3>
-            </div>
-            {/* column 2 */}
-            <div className="col-lg-6">
-              <div className="contact-page">
-          {loaderState && <div className="loader">
+        <div className="container contact-container">
+        <div className="row">
+          <div className="col-lg-12">
+            {loaderState && <div className="loader">
             <HashLoader 
               loading={loaderState}
               color={color}
             >
             </HashLoader>
           </div>}
+          </div>
+        </div>
+          <div className="row">
+          {/* column 1 */}
+            <div className="col-lg-6 contact-text">
+              <h3>I am always interested in hearing about new projects, so if you'd like to chat drop me a line.</h3>
+            </div>
+            {/* column 2 */}
+            <div className="col-lg-6">
+              <div className="contact-page">
+          
               <div className="contact-wrapper">
                 <form id="msg-form" onSubmit={handleSubmit}>
                     <div className="firstname-section inputs">
@@ -71,13 +77,12 @@ function Contact() {
                       </div>
                     </div>
 
-    
                     <div className="email-section inputs">
                       <div>
                         <input className="form-control" type="email" onChange={handleChange} placeholder="Email"  id="email" name="email" value={formState.email} required/>
                       </div>
                     </div>
-    
+
                     <div className="msg-section inputs">
                         <div>
                           <textarea className="form-control" name="message" onChange={handleChange} id="message" required cols="30" rows="10" value={formState.message} placeholder="Type your message"></textarea>
@@ -88,7 +93,7 @@ function Contact() {
                     </div>
                     {
                       responseMsg&&
-                    <div className="box-info" style={{
+                    <div className="alert alert-success mt-2" style={{
                       'border': '1px solid #fff'
                     }}>
                       <span>{ responseMsg }</span>
