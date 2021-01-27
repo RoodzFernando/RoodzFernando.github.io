@@ -10,7 +10,7 @@ import './styles/components/SocialLinks.scss';
 import './styles/components/Home.scss';
 // import './styles/components/AsidePage.scss';
 // import './styles/components/AsideNav.scss';
-// import './styles/components/Project.scss';
+import './styles/components/Project.scss';
 import './styles/components/About.scss';
 import './styles/components/Contact.scss';
 // import './styles/components/DashBoard.scss';

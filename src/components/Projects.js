@@ -18,35 +18,53 @@ function Projects() {
   console.log(project)
     return (
       <>
-      <div className="container">
+      <div className="container main-content">
           <div className="row">
-            <div className="col-lg-12">
-              <h3>My Recent Works</h3>
+            <div className="col-lg-12 project-title">
+              <h3 align="center">My Recent Works</h3>
             </div>
           </div>
         <div className="row">
           {
             projects.map(project => (
               <>
-              <div className="col-lg-4" style={{'border': '1px solid blue'}}>
-                <img src={project.image} alt="" style={{'width': '100%', 'height': '60%'}} />
-                <h2>{ project.title }</h2>
-                {
-                  project.tags.map(tag => (
-                    <span>{tag.tag}</span>
-                  ))
-                }
-                <button onClick={() => {
-                  handleClick(project.id, setProject)
-                  const projectDetail = document.getElementsByClassName('project-detail')[0]
-                  projectDetail.style = 'block'
-                  }} >See Project</button>
+              <div className="col-lg-4 project-card">
+                {/* <div className="row"> */}
+                  <div className="row">
+                    <div className="col-lg-12 project-img">
+                      <img src={project.image} alt="" />
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-lg-12 proj-title">
+                      <h2>{ project.title }</h2>
+                    </div>
+                  </div>
+                    <div className="tags-container">
+                  {
+                      project.tags.map(tag => (
+                        <span>{tag.tag}</span>
+                      ))
+                  }
+                    </div>
+                  <div className="row">
+                    <div className="col-lg-6 offset-lg-3 project-btn">
+                      <button className="btn btn-primary"
+                        onClick={() => {
+                        handleClick(project.id, setProject)
+                        const projectDetail = document.getElementsByClassName('project-detail')[0]
+                        projectDetail.style = 'block'
+                        }} >See Project</button>
+                    </div>
+                  </div>
+                {/* </div> */}
               </div>
               </>
             ))
           }
         </div>
         </div>
+        {/* single project */}
         <div className="container project-detail" style={{'display': 'none'}}>
           <div className="row">
             <div className="col-lg-12">
@@ -55,7 +73,7 @@ function Projects() {
                   <button onClick={ () => {
                     const hideElement = document.getElementsByClassName('project-detail')[0]
                     hideElement.style.display = 'none'
-                  } } >X</button>
+                  } } >x</button>
                 </div>
               </div>
               <div className="row">
