@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Navigation() {
+  const [visibility, setVisibility] = useState(false)
   const clickHandle = event => {
-    event.preventDefault()
-    console.log('clicked')
+    const expandElements = document.getElementById('navbarSupportedContent')
+    expandElements.style.display = visibility ? 'block' : 'none'
+    setVisibility(!visibility)
   }
     return (
         <>

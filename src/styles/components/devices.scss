@@ -33,7 +33,27 @@
         display: none;
       }
       .intro {
-        margin-top: 0;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        width: 100vw;
+        h1 {
+          font-size: 1.9em;
+        }
+        h2 {
+          font-size: 1.7em;
+        }
+        h1, h2, p {
+          padding: 0;
+          margin: 0;
+          text-align: center;
+        }
+        p {
+          margin-left: 0.4em;
+          margin-right: 0.4em;
+          text-align: justify;
+          margin-bottom: 1.2em;
+        }
       }
     }
   }
@@ -43,6 +63,17 @@
     .projects-wrapper {
       display: grid;
       grid-template-columns: 1fr;
+    }
+  }
+  // About component
+
+  .about-page {
+    .about-text {
+      p {
+        margin: 0;
+        width: 100%;
+          text-align: justify;
+        }
     }
   }
 
