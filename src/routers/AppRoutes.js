@@ -5,7 +5,6 @@ import Footer from '../components/Footer'
 import About from '../components/About'
 import Projects from '../components/Projects'
 import Contact from '../components/Contact';
-import Navigation from '../components/Navigation'
 import Login from '../components/Login'
 import Dashboard from '../components/Dashboard'
 import ProjectCreate from '../components/ProjectCreate'
@@ -20,10 +19,7 @@ function AppRoutes() {
                 <About />
                 <Contact />
                 <Switch>
-                    {/* <Route path="/" component={App} exact={true} /> */}
                     <Route path="/about" component={About} />
-                    {/* <Route path="/projects" component={Projects} /> */}
-                    {/* <Route path="/contact" component={Contact} /> */}
                     <Route path="/login" component={Login} />
                     <Route path="/dashboard" component={Dashboard} />
                     <Route path="/new-project" component={ProjectCreate} />
