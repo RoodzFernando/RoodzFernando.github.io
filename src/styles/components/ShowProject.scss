@@ -1,0 +1,62 @@
+@import '../base/variables';
+@import '../base/tags';
+
+.project-detail {
+    position: absolute;
+    height: 99.4vh;
+    overflow: auto;
+    left: 0;
+    bottom: 10%;
+    right: 0;
+    background: $grey-border;
+    z-index: 10;
+    border-radius: 15px;
+    .close-btn {
+      text-align: right;
+      button {
+        color: $border-btn;
+        border: 1px solid $border-btn;
+        border-radius: 8px;
+        margin-top: 0.4em;
+        margin-bottom: 0.4em;
+      }
+    }
+    .detail-img {
+      padding: 0;
+      img {
+        width: 100%;
+        border-radius: 15px;
+      }
+    }
+    .detail-title {
+      h2 {
+        color: $blue;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+      span {
+        @include tags_style;
+        padding: 0.4em;
+        border-radius: 6px;
+      }
+    }
+    .btn-links {
+      padding-top: 1.2em;
+      a {
+        background: $green;
+        border: 1px solid $green;
+        &:first-child {
+          margin-right: 0.9em;
+        }
+      }
+    }
+    .detail-description {
+      margin-top: 1.2em;
+      margin-bottom: 0.9em;
+      p {
+        color: $blue;
+        font-size: 1.2em;
+        text-align: justify;
+      }
+    }
+  }

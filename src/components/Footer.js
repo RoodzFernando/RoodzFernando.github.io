@@ -1,10 +1,13 @@
 import React from 'react'
+import SocialLinks from './SocialLinks'
 
 function Footer() {
   return (
     <>
       <footer>
-          <p>&copy; 2020 Roodz Fernando</p>
+          <div className="col-lg-12 mb-4">
+            <SocialLinks />
+          </div>
       </footer>
     </>
   )

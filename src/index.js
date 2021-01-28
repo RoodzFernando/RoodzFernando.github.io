@@ -4,18 +4,22 @@ import reportWebVitals from './reportWebVitals';
 import AppRoutes from './routers/AppRoutes';
 import { Provider } from 'react-redux'
 import { store } from './redux/redux';
+import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist//js/bootstrap.bundle.min.js'
 import './styles/styles.scss';
+import './styles/components/SocialLinks.scss';
 import './styles/components/Home.scss';
-import './styles/components/AsidePage.scss';
-import './styles/components/AsideNav.scss';
+// import './styles/components/AsidePage.scss';
+import './styles/components/Navigation.scss';
 import './styles/components/Project.scss';
+import './styles/components/ShowProject.scss';
 import './styles/components/About.scss';
 import './styles/components/Contact.scss';
-import './styles/components/DashBoard.scss';
-import './styles/components/ProjectCreate.scss';
-import './styles/components/ProjectUpdate.scss';
-import './styles/components/AppRoutes.scss';
-import './styles/components/Login.scss';
+// import './styles/components/DashBoard.scss';
+// import './styles/components/ProjectCreate.scss';
+// import './styles/components/ProjectUpdate.scss';
+// import './styles/components/AppRoutes.scss';
+// import './styles/components/Login.scss';
 import './styles/components/devices.scss';
 
 ReactDOM.render(

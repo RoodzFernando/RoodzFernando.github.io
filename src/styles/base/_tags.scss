@@ -1,0 +1,10 @@
+@mixin tags_style {
+  border: 1px solid $grey-border;
+  margin-left: 0.4em;
+  margin-right: 0.4em;
+  background: $grey;
+  color: $blue;
+  text-transform: capitalize;
+  padding: 0.1em;
+  border-radius: 3px;
+}
