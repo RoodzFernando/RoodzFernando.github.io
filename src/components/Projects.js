@@ -23,18 +23,18 @@ function Projects() {
         <div className="projects-wrapper">
           {
             projects.map(project => (
-              <div>
-              <div className="project-card">
+              <div key={project.id}>
+              <div  className="project-card">
                     <div className="project-img">
-                      <img src={project.image} alt="" />
+                      <img key={project.id} src={project.image} alt="" />
                     </div>
                     <div className=" proj-title">
-                      <h2>{ project.title }</h2>
+                      <h2 key={project.id}>{ project.title }</h2>
                     </div>
-                    <div className="tags-container">
+                    <div key={project.id} className="tags-container">
                   {
                       project.tags.map(tag => (
-                        <span>{tag.tag}</span>
+                        <span key={tag.id}>{tag.tag}</span>
                       ))
                   }
                     </div>
