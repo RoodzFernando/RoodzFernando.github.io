@@ -1,5 +1,8 @@
 @import '../base/variables';
+@import '../base/tags';
+
   .main-content {
+    position: relative;
     .project-title {
       margin-bottom: 2em;
       h3 {
@@ -17,6 +20,7 @@
           height: 100%;
           border-top-left-radius: 15px;
           border-top-right-radius: 15px;
+          border-bottom: 1px solid $grey-border;
         }
       }
       .proj-title {
@@ -30,14 +34,7 @@
         margin-top: 0.5em;
         margin-bottom: 1em;
         span {
-          border: 1px solid $grey-border;
-          margin-left: 0.4em;
-          margin-right: 0.4em;
-          background: $grey;
-          color: $blue;
-          text-transform: capitalize;
-          padding: 0.1em;
-          border-radius: 3px;
+         @include tags_style;
         }
       }
       .project-btn {

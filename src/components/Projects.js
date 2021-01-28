@@ -3,6 +3,7 @@ import { fetchproject, getProjects } from '../services/api'
 import sourceCode from '../images/source-code.svg'
 import livePreview from '../images/forward.svg'
 import { Link } from 'react-router-dom'
+import Showproject from './Showproject'
 
 function Projects() {
   const [projects, setProjects] = useState([])
@@ -15,7 +16,7 @@ function Projects() {
     fetchproject(id, setProject)
   }
   // const token = localStorage.getItem('token')
-  console.log(project)
+  // console.log(project)
     return (
       <>
       <div className="container main-content">
@@ -54,6 +55,13 @@ function Projects() {
                         handleClick(project.id, setProject)
                         const projectDetail = document.getElementsByClassName('project-detail')[0]
                         projectDetail.style = 'block'
+                        const elem = document.getElementsByTagName('body')[0];
+                        // eslint-disable-next-line no-restricted-globals
+                        const totalHeight = elem.scrollHeight - innerHeight
+                        // eslint-disable-next-line no-restricted-globals
+                        projectDetail.style.top = ( ( pageYOffset / totalHeight ) * 371) + '%'
+                        // projectDetail.style.top = ( ( totalHeight / pageYOffset ) * 30) + '%'
+                        // projectDetail.focus() 
                         }} >See Project</button>
                     </div>
                   </div>
@@ -65,45 +73,8 @@ function Projects() {
         </div>
         </div>
         {/* single project */}
-        <div className="container project-detail" style={{'display': 'none'}}>
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="row">
-                <div className="col-lg-3">
-                  <button onClick={ () => {
-                    const hideElement = document.getElementsByClassName('project-detail')[0]
-                    hideElement.style.display = 'none'
-                  } } >x</button>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-lg-12">
-                  <img src={project.image} alt=""/>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-lg-8">
-                  <h2>
-                    {project.title}
-                  </h2>
-                  { project.tags &&
-                    project.tags.split(',').map(tag => (
-                      <span>{tag}</span>
-                    ))
-                  }
-                </div>
-                <div className="col-lg-4">
-                  <a href={project.live_version}>See live</a>
-                  <a href={project.source_code}>See Source</a>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-lg-12">
-                  <p>{ project.description }</p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="show-project">
+          <Showproject project={ project } />
         </div>
     </>
     )
