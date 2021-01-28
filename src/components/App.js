@@ -53,7 +53,6 @@ function App() {
               Look through some of my work and experience. If you like what you see and have a project you need help on,
               do not hesitate to contact me.
             </p>
-  
           </div>
             <SocialLinks />
         </div>

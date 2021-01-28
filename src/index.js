@@ -20,7 +20,7 @@ import './styles/components/Contact.scss';
 // import './styles/components/ProjectUpdate.scss';
 // import './styles/components/AppRoutes.scss';
 // import './styles/components/Login.scss';
-// import './styles/components/devices.scss';
+import './styles/components/devices.scss';
 
 ReactDOM.render(
   <React.StrictMode>
