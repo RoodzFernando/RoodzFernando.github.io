@@ -2,7 +2,7 @@ import React from 'react'
 import Skills from './Skills'
 function About() {
     return (
-        <div className="container about-page pt-5">
+        <div className="container about-page pt-5" id="about">
           <div className="row">
             <div className="col-lg-12 col-lg-offset-2">
               <div className="about-text pb-5" align="center">

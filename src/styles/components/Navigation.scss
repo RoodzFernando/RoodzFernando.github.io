@@ -1,0 +1,11 @@
+@import '../base/variables';
+
+nav {
+  .nav-item {
+  a {
+    color: $blue;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  }
+}

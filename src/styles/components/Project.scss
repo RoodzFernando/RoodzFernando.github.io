@@ -9,9 +9,14 @@
         color: $blue;
       }
     }
+    .projects-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1em;
     .project-card {
       border: 1px solid $grey-border;
       border-radius: 15px;
+      width: 100%;
       .project-img {
         padding: 0;
         height: 15em;
@@ -47,3 +52,4 @@
       }
     }
   }
+}

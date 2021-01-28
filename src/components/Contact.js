@@ -37,7 +37,7 @@ function Contact() {
         });
     }
     return (
-        <div className="container contact-container">
+        <div className="container contact-container" id="contact">
         <div className="row">
           <div className="col-lg-12">
             {loaderState && <div className="loader">

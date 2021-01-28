@@ -1,5 +1,4 @@
 import React from 'react'
-import { NavLink  } from 'react-router-dom'
 
 function Navigation() {
   const clickHandle = event => {
@@ -16,15 +15,15 @@ function Navigation() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav m-auto mb-2 mb-lg-0">
             <li className="nav-item ml-5">
-              <NavLink to="/projects">Portfolio</NavLink>
+              <a href="#projects">Portfolio</a>
             </li>
 
             <li className="nav-item ml-5">
-              <NavLink to="/about">About</NavLink>
+              <a href="#about">About</a>
             </li>
 
             <li className="nav-item ml-5">
-              <NavLink to="/contact">Contact</NavLink>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </div>
