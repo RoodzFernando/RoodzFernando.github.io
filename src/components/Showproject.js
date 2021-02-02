@@ -22,9 +22,9 @@ function Showproject({project}) {
               </div>
               <div className="row">
                 <div className="col-lg-8 detail-title">
-                  <h2>
+                 {project && <h2>
                     {project.title}
-                  </h2>
+                  </h2>}
                   { project.tags &&
                     project.tags.split(',').map(tag => (
                       <span>{tag}</span>
@@ -38,7 +38,10 @@ function Showproject({project}) {
               </div>
               <div className="row">
                 <div className="col-lg-12 detail-description">
+                {
+                  project &&
                   <p>{ project.description }</p>
+                }
                 </div>
               </div>
             </div>
