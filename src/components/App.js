@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navigation from './Navigation'
 import SocialLinks from './SocialLinks'
 import imgOne from '../images/img-one.svg'
@@ -8,9 +8,16 @@ import imgFour from '../images/img-four.svg'
 import imgFive from '../images/img-five.svg'
 import imgSix from '../images/img-six.svg'
 import imgSeven from '../images/img-seven.svg'
+import Projects from './Projects'
+import { getProjects } from '../services/api'
 
 function App() {
+  const [projects, setProjects] = useState([])
+  useEffect(() => {
+    getProjects(setProjects)
+  }, [])
     return (
+      <>
       <div className="home-container">
       <Navigation />
         <div className="container home-page">
@@ -57,6 +64,8 @@ function App() {
             <SocialLinks />
         </div>
       </div>
+        <Projects projects={projects} />
+      </>
     )
 }
 

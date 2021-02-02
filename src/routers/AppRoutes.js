@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import App from '../components/App'
 import Footer from '../components/Footer'
 import About from '../components/About'
-import Projects from '../components/Projects'
 import Contact from '../components/Contact';
 import Login from '../components/Login'
 import Dashboard from '../components/Dashboard'
@@ -15,7 +14,6 @@ function AppRoutes() {
         <div className="app-routes">
             <Router>
                 <App />
-                <Projects />
                 <About />
                 <Contact />
                 <Switch>

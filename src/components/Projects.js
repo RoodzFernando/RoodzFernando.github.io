@@ -1,14 +1,10 @@
 /* eslint-disable no-restricted-globals */
-import React, { useEffect, useState } from 'react'
-import { fetchproject, getProjects } from '../services/api'
+import React, { useState } from 'react'
+import { fetchproject } from '../services/api'
 import Showproject from './Showproject'
 
-function Projects() {
-  const [projects, setProjects] = useState([])
+function Projects({projects}) {
   const [project, setProject] = useState({})
-  useEffect(() => {
-    getProjects(setProjects)
-  }, [])
   const handleClick = (id, setProject) => {
     fetchproject(id, setProject)
   }
