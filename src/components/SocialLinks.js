@@ -11,25 +11,25 @@ function SocialLinks() {
         <div className="col-lg-12 link-container">
           <div className="links">
             <a href="https://github.com/RoodzFernando" rel="noreferrer" target="_blank">
-              <img src= {github} alt=""/>
+              <img src= {github} alt="github_social_link"/>
             </a>
           </div>
   
           <div className="links">
             <a href="https://www.linkedin.com/in/roodz-fernando-fleurant/" rel="noreferrer" target="_blank">
-              <img src={linkedIn} alt=""/>
+              <img src={linkedIn} alt="linked_in_social_link"/>
             </a>
           </div>
   
           <div className="links">
             <a href="https://angel.co/u/roodz-fernando-fleurant" rel="noreferrer" target="_blank">
-              <img src={angelList} alt=""/>
+              <img src={angelList} alt="angel_social_link"/>
             </a>
           </div>
   
           <div className="links">
             <a href="https://twitter.com/RoodzFernando" rel="noreferrer" target="_blank">
-              <img src={twitter} alt=""/>
+              <img src={twitter} alt="twitter_social_link"/>
             </a>
           </div>
         </div>
