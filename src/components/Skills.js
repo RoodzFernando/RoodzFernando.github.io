@@ -14,7 +14,7 @@ function Skills() {
             </div>
 
             <div className="skills-name">
-              <h3>Languages</h3>
+              <h2>Languages</h2>
             </div>
 
           <div className="tags">
