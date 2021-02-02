@@ -48,6 +48,8 @@
         button {
           background: $green;
           border:1px solid $green;
+          color: $btn-color;
+          font-weight: bold;
         }
       }
     }
