@@ -13,7 +13,7 @@ function Projects({projects}) {
       <div className="container main-content" id="projects">
           <div className="row">
             <div className="col-lg-12 project-title">
-              <h3 align="center">My Recent Works</h3>
+              <h3 align="center">My Recent Work</h3>
             </div>
           </div>
         <div className="projects-wrapper">

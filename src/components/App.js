@@ -56,10 +56,7 @@ function App() {
             <h1>Hello, I'm Fernando.</h1>
             <h2>I'm a software developer</h2>
             <p>
-              I love building new things, need help to build a product, feature or website?
-              Look through some of my work and experience. If you like what you see and have a project you need help on,
-              do not hesitate to contact me.
-            </p>
+              I love building new things. Do you need help to create a product, feature, or website? Look through some of my work and experience. If you like what you see and have a project you need help on, do not hesitate to contact me.            </p>
           </div>
             <SocialLinks />
         </div>

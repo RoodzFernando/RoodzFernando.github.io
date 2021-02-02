@@ -52,7 +52,7 @@ function Contact() {
           <div className="row">
           {/* column 1 */}
             <div className="col-lg-6 contact-text">
-              <h3>I am always interested in hearing about new projects, so if you'd like to chat drop me a line.</h3>
+              <h3>I am always interested in hearing about new projects, so if you'd like to chat, drop me a line.</h3>
             </div>
             {/* column 2 */}
             <div className="col-lg-6">
