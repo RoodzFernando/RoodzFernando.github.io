@@ -65,13 +65,15 @@ function Contact() {
                       {/* column 1 */}
                         <div className="col-lg-6">
                           <div>
+                            <label htmlFor="name" className="form-label">First Name:</label>
                             <input className="form-control" type="text" onChange={handleChange} placeholder="First Name"  id="name" name="name" value={formState.firstName} required/>
                           </div>
                         </div>
                         {/* column 2 */}
                         <div className="col-lg-6">
                           <div>
-                            <input className="form-control" type="text" onChange={handleChange} placeholder="Last Name"  id="name" name="name" value={formState.lastName} required/>
+                            <label htmlFor="lastName" className="form-label">Last Name:</label>
+                            <input className="form-control" type="text" onChange={handleChange} placeholder="Last Name"  id="lastName" name="name" value={formState.lastName} required/>
                           </div>
                         </div>
                       </div>
@@ -79,12 +81,14 @@ function Contact() {
 
                     <div className="email-section inputs">
                       <div>
+                        <label htmlFor="email" className="form-label">Email:</label>
                         <input className="form-control" type="email" onChange={handleChange} placeholder="Email"  id="email" name="email" value={formState.email} required/>
                       </div>
                     </div>
 
                     <div className="msg-section inputs">
                         <div>
+                          <label htmlFor="message" className="form-label">Message:</label>
                           <textarea className="form-control" name="message" onChange={handleChange} id="message" required cols="30" rows="10" value={formState.message} placeholder="Type your message"></textarea>
                         </div>
                     </div>

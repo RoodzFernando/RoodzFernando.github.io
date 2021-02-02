@@ -26,6 +26,12 @@
   }
   .contact-page {
     .contact-wrapper {
+      form {
+        label {
+          color: $blue;
+          font-weight: bold;
+        }
+      }
       .inputs {
         margin-bottom: 1em;
       }
