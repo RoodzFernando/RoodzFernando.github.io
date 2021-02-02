@@ -38,15 +38,15 @@ function ProjectUpdate({ history, match }) {
   return (
     <div className="update-page">
       <h1>Update Project</h1>
-      <Form 
+      <Form
         title={project.title}
         description={project.description}
         live_version={project.live_version}
         source_code={project.source_code}
         tags={project.tags}
-        text='Update' 
-        handleSubmit={handleSubmit} 
-        handleChange={handleChange} 
+        text='Update'
+        handleSubmit={handleSubmit}
+        handleChange={handleChange}
       />
     </div>
   )
