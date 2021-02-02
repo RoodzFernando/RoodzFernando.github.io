@@ -2,29 +2,30 @@ import React from 'react'
 import close from '../images/close.svg'
 
 function Showproject({project}) {
+  const handletoggle = () => {
+    const hideElement = document.getElementsByClassName('project-detail')[0]
+    hideElement.style.display = 'none'
+  }
   return (
     <>
-      <div className="container project-detail" style={{'display': 'none'}}>
+      <div className="container project-detail">
           <div className="row">
             <div className="col-lg-10 offset-lg-1">
               <div className="row">
                 <div className="col-lg-12 close-btn">
-                  <button onClick={ () => {
-                    const hideElement = document.getElementsByClassName('project-detail')[0]
-                    hideElement.style.display = 'none'
-                  } } ><img src={close} alt=""/></button>
+                  <img onClick={handletoggle} src={close} alt="close_button"/>
                 </div>
               </div>
               <div className="row">
                 <div className="col-lg-12 detail-img">
-                  <img src={project.image} alt=""/>
+                  <img src={project.image} alt={project.id}/>
                 </div>
               </div>
               <div className="row">
                 <div className="col-lg-8 detail-title">
-                 {project && <h2>
-                    {project.title}
-                  </h2>}
+                {project && 
+                  <h2>{project.title}</h2>
+                  }
                   { project.tags &&
                     project.tags.split(',').map(tag => (
                       <span>{tag}</span>

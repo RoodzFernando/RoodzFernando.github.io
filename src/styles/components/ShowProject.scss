@@ -2,6 +2,7 @@
 @import '../base/tags';
 
 .project-detail {
+    display: none;
     position: absolute;
     height: 99.4vh;
     overflow: auto;
@@ -13,12 +14,14 @@
     border-radius: 15px;
     .close-btn {
       text-align: right;
-      button {
+      img {
         color: $border-btn;
         border: 1px solid $border-btn;
+        padding: 5px;
         border-radius: 8px;
         margin-top: 0.4em;
         margin-bottom: 0.4em;
+        cursor: pointer;
       }
     }
     .detail-img {
