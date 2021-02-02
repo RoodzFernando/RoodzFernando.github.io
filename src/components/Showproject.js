@@ -18,12 +18,12 @@ function Showproject({project}) {
               </div>
               <div className="row">
                 <div className="col-lg-12 detail-img">
-                  <img src={project.image} alt={project.id}/>
+                  <img src={project.image} alt={`project_${project.id}`}/>
                 </div>
               </div>
               <div className="row">
                 <div className="col-lg-8 detail-title">
-                {project && 
+                {project.title && 
                   <h2>{project.title}</h2>
                   }
                   { project.tags &&
