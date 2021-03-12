@@ -9,12 +9,12 @@ import imgFive from '../images/img-five.svg'
 import imgSix from '../images/img-six.svg'
 import imgSeven from '../images/img-seven.svg'
 import Projects from './Projects'
-import { getProjects } from '../services/api'
 
 function App() {
+  const projectsJson = require('../services/projects.json') 
   const [projects, setProjects] = useState([])
   useEffect(() => {
-    getProjects(setProjects)
+    setProjects(projectsJson)
   }, [])
     return (
       <>

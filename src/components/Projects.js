@@ -1,13 +1,27 @@
 /* eslint-disable no-restricted-globals */
 import React, { useState } from 'react'
-import { fetchproject } from '../services/api'
 import Showproject from './Showproject'
+
+import bookingApp from '../images/projects_img/booking_app.png'
+import clashOfCars from '../images/projects_img/clash_of_cars.png'
+import neewsWeek from '../images/projects_img/newsweek_clone.PNG'
+import portfolio from '../images/projects_img/portfolio.PNG'
+import recipeBook from '../images/projects_img/recipe_book.PNG'
+import weatherApp from '../images/projects_img/weather_app.png'
 
 function Projects({projects}) {
   const [project, setProject] = useState({})
+  const images = {
+    booking: bookingApp,
+    clashcars: clashOfCars,
+    neews : neewsWeek,
+    portfolio : portfolio,
+    recipe : recipeBook,
+    weather : weatherApp,
+  } 
   const handleClick = (id, setProject) => {
-    fetchproject(id, setProject)
   }
+  console.log(projects)
     return (
       <>
       <div className="container main-content" id="projects">
@@ -22,7 +36,7 @@ function Projects({projects}) {
               <div key={project.id}>
               <div  className="project-card">
                     <div className="project-img">
-                      <img key={project.id} src={project.image} alt="" />
+                      <img key={project.id} src={images[project.image]} alt="" />
                     </div>
                     <div className=" proj-title">
                       <h2 key={project.id}>{ project.title }</h2>

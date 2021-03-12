@@ -1,0 +1,242 @@
+[
+    {
+        "id": 38,
+        "title": "Personal Portfolio",
+        "description": "This project showcases some of the projects, I have worked on and the technologies used.",
+        "live_version": "http://www.roodzfernando.me/",
+        "source_code": "https://github.com/RoodzFernando/RoodzFernando.io",
+        "created_at": "2021-01-13T20:08:51.866Z",
+        "updated_at": "2021-01-13T20:08:51.910Z",
+        "image": "portfolio",
+        "tags": [
+            {
+                "id": 95,
+                "tag": "Html",
+                "project_id": 38,
+                "created_at": "2021-01-13T20:08:52.370Z",
+                "updated_at": "2021-01-13T20:08:52.370Z"
+            },
+            {
+                "id": 96,
+                "tag": " sass",
+                "project_id": 38,
+                "created_at": "2021-01-13T20:08:54.337Z",
+                "updated_at": "2021-01-13T20:08:54.337Z"
+            },
+            {
+                "id": 97,
+                "tag": " Rails",
+                "project_id": 38,
+                "created_at": "2021-01-13T20:08:54.548Z",
+                "updated_at": "2021-01-13T20:08:54.548Z"
+            },
+            {
+                "id": 98,
+                "tag": " React",
+                "project_id": 38,
+                "created_at": "2021-01-13T20:08:54.735Z",
+                "updated_at": "2021-01-13T20:08:54.735Z"
+            }
+        ]
+    },
+    {
+        "id": 37,
+        "title": "Booking App",
+        "description": "This booking app built using React fetches data from a Ruby on Rails API and displays details about cars, and gives the possibility to the user to book an appointment for a test-drive.",
+        "live_version": "https://booking-car-app.herokuapp.com/",
+        "source_code": "https://github.com/RoodzFernando/booking-app-react",
+        "created_at": "2021-01-13T20:07:54.524Z",
+        "updated_at": "2021-01-13T20:07:54.560Z",
+        "image": "booking",
+        "tags": [
+            {
+                "id": 91,
+                "tag": "Html",
+                "project_id": 37,
+                "created_at": "2021-01-13T20:07:55.008Z",
+                "updated_at": "2021-01-13T20:07:55.008Z"
+            },
+            {
+                "id": 92,
+                "tag": " sass",
+                "project_id": 37,
+                "created_at": "2021-01-13T20:07:55.216Z",
+                "updated_at": "2021-01-13T20:07:55.216Z"
+            },
+            {
+                "id": 93,
+                "tag": " Rails",
+                "project_id": 37,
+                "created_at": "2021-01-13T20:07:55.388Z",
+                "updated_at": "2021-01-13T20:07:55.388Z"
+            },
+            {
+                "id": 94,
+                "tag": " React",
+                "project_id": 37,
+                "created_at": "2021-01-13T20:07:55.588Z",
+                "updated_at": "2021-01-13T20:07:55.588Z"
+            }
+        ]
+    },
+    {
+        "id": 36,
+        "title": "Clash of Cars",
+        "description": "This project is a simplistic game where the user will avoid collision with coming opponents' cars building with Phaser 3 game engine.",
+        "live_version": "https://clash-of-cars.netlify.app/",
+        "source_code": "https://github.com/RoodzFernando/js-capstone-phaser-game",
+        "created_at": "2021-01-13T20:06:32.112Z",
+        "updated_at": "2021-01-13T20:06:32.162Z",
+        "image": "clashcars",
+        "tags": [
+            {
+                "id": 87,
+                "tag": "Html",
+                "project_id": 36,
+                "created_at": "2021-01-13T20:06:32.612Z",
+                "updated_at": "2021-01-13T20:06:32.612Z"
+            },
+            {
+                "id": 88,
+                "tag": " CSS",
+                "project_id": 36,
+                "created_at": "2021-01-13T20:06:32.785Z",
+                "updated_at": "2021-01-13T20:06:32.785Z"
+            },
+            {
+                "id": 89,
+                "tag": " JavaScript ",
+                "project_id": 36,
+                "created_at": "2021-01-13T20:06:33.024Z",
+                "updated_at": "2021-01-13T20:06:33.024Z"
+            },
+            {
+                "id": 90,
+                "tag": "phaser framework",
+                "project_id": 36,
+                "created_at": "2021-01-13T20:06:33.214Z",
+                "updated_at": "2021-01-13T20:06:33.214Z"
+            }
+        ]
+    },
+    {
+        "id": 35,
+        "title": "Weather App",
+        "description": "It is a handy app to check the weather quickly for any city in the world. You can choose to see the temperature in either Celsius or Fahrenheit.",
+        "live_version": "https://rawcdn.githack.com/RoodzFernando/weather-app-js/e432ee07d9ca69f23879d62131e8979b701bc9a3/dist/index.html",
+        "source_code": "https://github.com/RoodzFernando/weather-app-js",
+        "created_at": "2021-01-13T20:02:58.014Z",
+        "updated_at": "2021-01-13T20:02:58.075Z",
+        "image": "weather",
+        "tags": [
+            {
+                "id": 83,
+                "tag": "Html",
+                "project_id": 35,
+                "created_at": "2021-01-13T20:02:58.367Z",
+                "updated_at": "2021-01-13T20:02:58.367Z"
+            },
+            {
+                "id": 84,
+                "tag": " sass",
+                "project_id": 35,
+                "created_at": "2021-01-13T20:02:58.584Z",
+                "updated_at": "2021-01-13T20:02:58.584Z"
+            },
+            {
+                "id": 85,
+                "tag": " Qebpack",
+                "project_id": 35,
+                "created_at": "2021-01-13T20:02:58.863Z",
+                "updated_at": "2021-01-13T20:02:58.863Z"
+            },
+            {
+                "id": 86,
+                "tag": " Openweather API",
+                "project_id": 35,
+                "created_at": "2021-01-13T20:02:59.034Z",
+                "updated_at": "2021-01-13T20:02:59.034Z"
+            }
+        ]
+    },
+    {
+        "id": 34,
+        "title": "Recipe Book",
+        "description": "In this small platform, you can add your recipe or other recipes you have tried, and classify them in six different categories. You can also vote for your recipe or other people's recipes.",
+        "live_version": "http://recipe-book-ror-capstone.herokuapp.com/",
+        "source_code": "https://github.com/RoodzFernando/lifestyle_article-ror-capstone",
+        "created_at": "2021-01-13T19:58:12.922Z",
+        "updated_at": "2021-01-13T19:58:13.016Z",
+        "image": "recipe",
+        "tags": [
+            {
+                "id": 78,
+                "tag": "html",
+                "project_id": 34,
+                "created_at": "2021-01-13T19:58:13.349Z",
+                "updated_at": "2021-01-13T19:58:13.349Z"
+            },
+            {
+                "id": 79,
+                "tag": " sass",
+                "project_id": 34,
+                "created_at": "2021-01-13T19:58:13.676Z",
+                "updated_at": "2021-01-13T19:58:13.676Z"
+            },
+            {
+                "id": 80,
+                "tag": " ruby",
+                "project_id": 34,
+                "created_at": "2021-01-13T19:58:13.853Z",
+                "updated_at": "2021-01-13T19:58:13.853Z"
+            },
+            {
+                "id": 81,
+                "tag": " rails",
+                "project_id": 34,
+                "created_at": "2021-01-13T19:58:14.030Z",
+                "updated_at": "2021-01-13T19:58:14.030Z"
+            },
+            {
+                "id": 82,
+                "tag": " aws/s3",
+                "project_id": 34,
+                "created_at": "2021-01-13T19:58:14.208Z",
+                "updated_at": "2021-01-13T19:58:14.208Z"
+            }
+        ]
+    },
+    {
+        "id": 33,
+        "title": "Newsweek Clone",
+        "description": "This is a responsive replica of the news site Newsweek.com built using the Bootstrap framework.",
+        "live_version": "https://roodzfernando.github.io/bootstrap-framework/",
+        "source_code": "https://github.com/RoodzFernando/bootstrap-framework",
+        "created_at": "2021-01-13T19:55:58.389Z",
+        "updated_at": "2021-01-13T19:55:58.432Z",
+        "image": "neews",
+        "tags": [
+            {
+                "id": 75,
+                "tag": "Html",
+                "project_id": 33,
+                "created_at": "2021-01-13T19:55:58.806Z",
+                "updated_at": "2021-01-13T19:55:58.806Z"
+            },
+            {
+                "id": 76,
+                "tag": " CSS",
+                "project_id": 33,
+                "created_at": "2021-01-13T19:55:58.999Z",
+                "updated_at": "2021-01-13T19:55:58.999Z"
+            },
+            {
+                "id": 77,
+                "tag": " Bootstrap",
+                "project_id": 33,
+                "created_at": "2021-01-13T19:55:59.399Z",
+                "updated_at": "2021-01-13T19:55:59.399Z"
+            }
+        ]
+    }
+]
