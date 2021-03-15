@@ -10,7 +10,7 @@ import recipeBook from '../images/projects_img/recipe_book.PNG'
 import weatherApp from '../images/projects_img/weather_app.png'
 
 function Projects({projects}) {
-  const [project, setProject] = useState({})
+  const [project, setProject] = useState([])
   const images = {
     booking: bookingApp,
     clashcars: clashOfCars,
@@ -20,8 +20,10 @@ function Projects({projects}) {
     weather : weatherApp,
   } 
   const handleClick = (id, setProject) => {
+    const element = projects.filter(project => project.id === id)
+    setProject(element)
   }
-  console.log(projects)
+  // console.log(project)
     return (
       <>
       <div className="container main-content" id="projects">
@@ -51,12 +53,12 @@ function Projects({projects}) {
                     <div className="project-btn">
                       <button className="btn btn-primary"
                         onClick={() => {
-                        handleClick(project.id, setProject)
-                        const projectDetail = document.getElementsByClassName('project-detail')[0]
-                        projectDetail.style.display = 'block'
-                        const elem = document.getElementsByTagName('body')[0];
-                        const totalHeight = elem.scrollHeight - innerHeight
-                        projectDetail.style.top = ( ( pageYOffset / totalHeight ) * 371) + '%'
+                          handleClick(project.id, setProject)
+                          const projectDetail = document.getElementsByClassName('project-detail')[0]
+                          projectDetail.style.display = 'block'
+                          const elem = document.getElementsByTagName('body')[0];
+                          const totalHeight = elem.scrollHeight - innerHeight
+                          projectDetail.style.top = ( ( pageYOffset / totalHeight ) * 371) + '%'
                         }} >See Project</button>
                     </div>
               </div>
@@ -66,7 +68,7 @@ function Projects({projects}) {
         </div>
         </div>
         <div className="show-project">
-          <Showproject project={ project } />
+          <Showproject project={ project } images= {images} />
         </div>
     </>
     )
