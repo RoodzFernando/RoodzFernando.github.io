@@ -2,7 +2,7 @@
     {
         "id": 38,
         "title": "Personal Portfolio",
-        "description": "This project showcases some of the projects, I have worked on and the technologies used.",
+        "description": "This project showcases some of the projects I have worked on and the technologies used.",
         "live_version": "http://www.roodzfernando.me/",
         "source_code": "https://github.com/RoodzFernando/RoodzFernando.io",
         "created_at": "2021-01-13T20:08:51.866Z",
@@ -11,28 +11,28 @@
         "tags": [
             {
                 "id": 95,
-                "tag": "Html",
+                "tag": "HTML",
                 "project_id": 38,
                 "created_at": "2021-01-13T20:08:52.370Z",
                 "updated_at": "2021-01-13T20:08:52.370Z"
             },
             {
                 "id": 96,
-                "tag": " sass",
+                "tag": "Sass",
                 "project_id": 38,
                 "created_at": "2021-01-13T20:08:54.337Z",
                 "updated_at": "2021-01-13T20:08:54.337Z"
             },
             {
                 "id": 97,
-                "tag": " Rails",
+                "tag": "Rails",
                 "project_id": 38,
                 "created_at": "2021-01-13T20:08:54.548Z",
                 "updated_at": "2021-01-13T20:08:54.548Z"
             },
             {
                 "id": 98,
-                "tag": " React",
+                "tag": "React",
                 "project_id": 38,
                 "created_at": "2021-01-13T20:08:54.735Z",
                 "updated_at": "2021-01-13T20:08:54.735Z"
@@ -42,7 +42,7 @@
     {
         "id": 37,
         "title": "Booking App",
-        "description": "This booking app built using React fetches data from a Ruby on Rails API and displays details about cars, and gives the possibility to the user to book an appointment for a test-drive.",
+        "description": "This booking app, built using React, fetches data from a Ruby on Rails API and displays details about cars, and gives the possibility to the user to book an appointment for a test-drive.",
         "live_version": "https://booking-car-app.herokuapp.com/",
         "source_code": "https://github.com/RoodzFernando/booking-app-react",
         "created_at": "2021-01-13T20:07:54.524Z",
@@ -51,28 +51,28 @@
         "tags": [
             {
                 "id": 91,
-                "tag": "Html",
+                "tag": "HTML",
                 "project_id": 37,
                 "created_at": "2021-01-13T20:07:55.008Z",
                 "updated_at": "2021-01-13T20:07:55.008Z"
             },
             {
                 "id": 92,
-                "tag": " sass",
+                "tag": "Sass",
                 "project_id": 37,
                 "created_at": "2021-01-13T20:07:55.216Z",
                 "updated_at": "2021-01-13T20:07:55.216Z"
             },
             {
                 "id": 93,
-                "tag": " Rails",
+                "tag": "Rails",
                 "project_id": 37,
                 "created_at": "2021-01-13T20:07:55.388Z",
                 "updated_at": "2021-01-13T20:07:55.388Z"
             },
             {
                 "id": 94,
-                "tag": " React",
+                "tag": "React",
                 "project_id": 37,
                 "created_at": "2021-01-13T20:07:55.588Z",
                 "updated_at": "2021-01-13T20:07:55.588Z"
@@ -82,7 +82,7 @@
     {
         "id": 36,
         "title": "Clash of Cars",
-        "description": "This project is a simplistic game where the user will avoid collision with coming opponents' cars building with Phaser 3 game engine.",
+        "description": "This project is a simplistic game where the user avoids collision with oncoming opponents' cars. Built with Phaser 3.",
         "live_version": "https://clash-of-cars.netlify.app/",
         "source_code": "https://github.com/RoodzFernando/js-capstone-phaser-game",
         "created_at": "2021-01-13T20:06:32.112Z",
@@ -91,28 +91,28 @@
         "tags": [
             {
                 "id": 87,
-                "tag": "Html",
+                "tag": "HTML",
                 "project_id": 36,
                 "created_at": "2021-01-13T20:06:32.612Z",
                 "updated_at": "2021-01-13T20:06:32.612Z"
             },
             {
                 "id": 88,
-                "tag": " CSS",
+                "tag": "CSS",
                 "project_id": 36,
                 "created_at": "2021-01-13T20:06:32.785Z",
                 "updated_at": "2021-01-13T20:06:32.785Z"
             },
             {
                 "id": 89,
-                "tag": " JavaScript ",
+                "tag": "JavaScript ",
                 "project_id": 36,
                 "created_at": "2021-01-13T20:06:33.024Z",
                 "updated_at": "2021-01-13T20:06:33.024Z"
             },
             {
                 "id": 90,
-                "tag": "phaser framework",
+                "tag": "Phaser framework",
                 "project_id": 36,
                 "created_at": "2021-01-13T20:06:33.214Z",
                 "updated_at": "2021-01-13T20:06:33.214Z"
@@ -123,7 +123,7 @@
         "id": 35,
         "title": "Weather App",
         "description": "It is a handy app to check the weather quickly for any city in the world. You can choose to see the temperature in either Celsius or Fahrenheit.",
-        "live_version": "https://rawcdn.githack.com/RoodzFernando/weather-app-js/e432ee07d9ca69f23879d62131e8979b701bc9a3/dist/index.html",
+        "live_version": "https://rawcdn.githack.com/RoodzFernando/weather-app-js/e432ee07d9ca69f23879d62131e8979b701bc9a3/dist/index.HTML",
         "source_code": "https://github.com/RoodzFernando/weather-app-js",
         "created_at": "2021-01-13T20:02:58.014Z",
         "updated_at": "2021-01-13T20:02:58.075Z",
@@ -131,28 +131,28 @@
         "tags": [
             {
                 "id": 83,
-                "tag": "Html",
+                "tag": "HTML",
                 "project_id": 35,
                 "created_at": "2021-01-13T20:02:58.367Z",
                 "updated_at": "2021-01-13T20:02:58.367Z"
             },
             {
                 "id": 84,
-                "tag": " sass",
+                "tag": "Sass",
                 "project_id": 35,
                 "created_at": "2021-01-13T20:02:58.584Z",
                 "updated_at": "2021-01-13T20:02:58.584Z"
             },
             {
                 "id": 85,
-                "tag": " Webpack",
+                "tag": "Webpack",
                 "project_id": 35,
                 "created_at": "2021-01-13T20:02:58.863Z",
                 "updated_at": "2021-01-13T20:02:58.863Z"
             },
             {
                 "id": 86,
-                "tag": " Openweather API",
+                "tag": "Openweather API",
                 "project_id": 35,
                 "created_at": "2021-01-13T20:02:59.034Z",
                 "updated_at": "2021-01-13T20:02:59.034Z"
@@ -171,35 +171,35 @@
         "tags": [
             {
                 "id": 78,
-                "tag": "html",
+                "tag": "HTML",
                 "project_id": 34,
                 "created_at": "2021-01-13T19:58:13.349Z",
                 "updated_at": "2021-01-13T19:58:13.349Z"
             },
             {
                 "id": 79,
-                "tag": " sass",
+                "tag": "Sass",
                 "project_id": 34,
                 "created_at": "2021-01-13T19:58:13.676Z",
                 "updated_at": "2021-01-13T19:58:13.676Z"
             },
             {
                 "id": 80,
-                "tag": " ruby",
+                "tag": "Ruby",
                 "project_id": 34,
                 "created_at": "2021-01-13T19:58:13.853Z",
                 "updated_at": "2021-01-13T19:58:13.853Z"
             },
             {
                 "id": 81,
-                "tag": " rails",
+                "tag": " Rails",
                 "project_id": 34,
                 "created_at": "2021-01-13T19:58:14.030Z",
                 "updated_at": "2021-01-13T19:58:14.030Z"
             },
             {
                 "id": 82,
-                "tag": " aws/s3",
+                "tag": "AWS/S3",
                 "project_id": 34,
                 "created_at": "2021-01-13T19:58:14.208Z",
                 "updated_at": "2021-01-13T19:58:14.208Z"
@@ -218,7 +218,7 @@
         "tags": [
             {
                 "id": 75,
-                "tag": "Html",
+                "tag": "HTML",
                 "project_id": 33,
                 "created_at": "2021-01-13T19:55:58.806Z",
                 "updated_at": "2021-01-13T19:55:58.806Z"
@@ -232,7 +232,7 @@
             },
             {
                 "id": 77,
-                "tag": " Bootstrap",
+                "tag": "Bootstrap",
                 "project_id": 33,
                 "created_at": "2021-01-13T19:55:59.399Z",
                 "updated_at": "2021-01-13T19:55:59.399Z"
