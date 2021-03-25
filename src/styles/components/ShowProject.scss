@@ -1,65 +1,75 @@
 @import '../base/variables';
 @import '../base/tags';
 
-.project-detail {
-    display: none;
-    position: absolute;
-    height: 99.4vh;
-    overflow: auto;
-    left: 0;
-    bottom: 10%;
-    right: 0;
-    background: $grey-border;
+.project-detail-one {
+  height: 100vh;
+  display: none;
+  .project-detail {
     z-index: 10;
-    border-radius: 15px;
-    .close-btn {
-      text-align: right;
-      img {
-        color: $border-btn;
-        border: 1px solid $border-btn;
-        padding: 5px;
-        border-radius: 8px;
-        margin-top: 0.4em;
-        margin-bottom: 0.4em;
-        cursor: pointer;
+      position: fixed;
+      height: 99.4vh;
+      overflow: auto;
+      left: 0;
+      top: 0;
+      right: 0;
+      background: $grey-border;
+      border-radius: 15px;
+      .close-btn {
+        text-align: right;
+        .x-button {
+          color: #7c7878a6;
+          cursor: pointer;
+          font-size: 2rem;
+          &:hover {
+            color: #5c5b5be5;
+          }
+        }
+        img {
+          color: $border-btn;
+          border: 1px solid $border-btn;
+          padding: 5px;
+          border-radius: 8px;
+          margin-top: 0.4em;
+          margin-bottom: 0.4em;
+          cursor: pointer;
+        }
       }
-    }
-    .detail-img {
-      padding: 0;
-      img {
-        width: 100%;
-        border-radius: 15px;
+      .detail-img {
+        padding: 0;
+        img {
+          width: 100%;
+          border-radius: 15px;
+        }
       }
-    }
-    .detail-title {
-      h2 {
-        color: $blue;
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
+      .detail-title {
+        h2 {
+          color: $blue;
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
+        }
+        span {
+          @include tags_style;
+          padding: 0.4em;
+          border-radius: 6px;
+        }
       }
-      span {
-        @include tags_style;
-        padding: 0.4em;
-        border-radius: 6px;
+      .btn-links {
+        padding-top: 1.2em;
+        a {
+          background: $green;
+          border: 1px solid $green;
+          &:first-child {
+            margin-right: 0.9em;
+          }
+        }
       }
-    }
-    .btn-links {
-      padding-top: 1.2em;
-      a {
-        background: $green;
-        border: 1px solid $green;
-        &:first-child {
-          margin-right: 0.9em;
+      .detail-description {
+        margin-top: 1.2em;
+        margin-bottom: 0.9em;
+        p {
+          color: $blue;
+          font-size: 1.2em;
         }
       }
     }
-    .detail-description {
-      margin-top: 1.2em;
-      margin-bottom: 0.9em;
-      p {
-        color: $blue;
-        font-size: 1.2em;
-        // text-align: justify;
-      }
-    }
-  }
+}

@@ -54,11 +54,8 @@ function Projects({projects}) {
                       <button className="btn btn-primary"
                         onClick={() => {
                           handleClick(project.id, setProject)
-                          const projectDetail = document.getElementsByClassName('project-detail')[0]
+                          const projectDetail = document.getElementsByClassName('project-detail-one')[0]
                           projectDetail.style.display = 'block'
-                          const elem = document.getElementsByTagName('body')[0];
-                          const totalHeight = elem.scrollHeight - innerHeight
-                          projectDetail.style.top = ( ( pageYOffset / totalHeight ) * 371) + '%'
                         }} >See Project</button>
                     </div>
               </div>

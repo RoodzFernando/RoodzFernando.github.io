@@ -1,19 +1,18 @@
 import React from 'react'
-import close from '../images/close.svg'
 
 function Showproject({project, images}) {
   const handletoggle = () => {
-    const hideElement = document.getElementsByClassName('project-detail')[0]
+    const hideElement = document.getElementsByClassName('project-detail-one')[0]
     hideElement.style.display = 'none'
   }
   return (
-    <>
+    <div className="project-detail-one">
       <div className="container project-detail">
           <div className="row">
             <div className="col-lg-10 offset-lg-1">
               <div className="row">
                 <div className="col-lg-12 close-btn">
-                  <img onClick={handletoggle} src={close} alt="close_button"/>
+                  <span className="x-button" onClick={handletoggle}>&times;</span>
                 </div>
               </div>
 
@@ -51,7 +50,7 @@ function Showproject({project, images}) {
               </div>
           </div>
         </div>
-    </>
+    </div>
   )
 }
 
