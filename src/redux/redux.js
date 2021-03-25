@@ -1,16 +1,17 @@
-import { createStore } from 'redux';
+// import { createStore } from 'redux';
 // initial state
-const initialState = {
-  loading: false,
-  projects: [],
-  msg: ''
-}
+// const initialState = {
+//   loading: false,
+//   projects: [],
+//   msg: ''
+// }
 // Actions
-const projectRequestStart = 'PROJECT_REQUEST_START'
-const projectRequestSuccess = 'PROJECT_REQUEST_SUCCESS'
-const projectRequestFail = 'PROJECT_REQUEST_FAIL'
-const projectDelete = 'DELETE_PROJECT'
+// const projectRequestStart = 'PROJECT_REQUEST_START'
+// const projectRequestSuccess = 'PROJECT_REQUEST_SUCCESS'
+// const projectRequestFail = 'PROJECT_REQUEST_FAIL'
+// const projectDelete = 'DELETE_PROJECT'
 // Actions generators
+/*
 export const requestStart = () => {
   return {
     type: projectRequestStart
@@ -38,8 +39,7 @@ export const deleteProject = msg => {
   }
 }
 
-// const projectRequestSuccess = 'PROJECT_REQUEST_SUCCESS'
-// reducer needs state and action
+
 const projectsReducer = (state = initialState, action) => {
   switch(action.type) {
     case projectRequestStart:
@@ -69,5 +69,6 @@ const projectsReducer = (state = initialState, action) => {
       return state
   }
 }
+*/
 // create store needs the reducer
-export let store = createStore(projectsReducer)
+// export let store = createStore(projectsReducer)

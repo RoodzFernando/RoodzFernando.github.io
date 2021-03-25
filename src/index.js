@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import AppRoutes from './routers/AppRoutes';
-import { Provider } from 'react-redux'
-import { store } from './redux/redux';
 import 'bootstrap/dist/css/bootstrap.min.css'
 // import 'bootstrap/dist//js/bootstrap.bundle.min.js'
 import './styles/styles.scss';
@@ -24,9 +22,7 @@ import './styles/components/devices.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
       <AppRoutes />
-    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

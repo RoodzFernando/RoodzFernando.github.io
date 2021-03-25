@@ -24,13 +24,6 @@
                 "updated_at": "2021-01-13T20:08:54.337Z"
             },
             {
-                "id": 97,
-                "tag": "Rails",
-                "project_id": 38,
-                "created_at": "2021-01-13T20:08:54.548Z",
-                "updated_at": "2021-01-13T20:08:54.548Z"
-            },
-            {
                 "id": 98,
                 "tag": "React",
                 "project_id": 38,
