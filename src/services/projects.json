@@ -116,7 +116,7 @@
         "id": 35,
         "title": "Weather App",
         "description": "It is a handy app to check the weather quickly for any city in the world. You can choose to see the temperature in either Celsius or Fahrenheit.",
-        "live_version": "https://rawcdn.githack.com/RoodzFernando/weather-app-js/e432ee07d9ca69f23879d62131e8979b701bc9a3/dist/index.HTML",
+        "live_version": "https://quirky-cori-bf42f6.netlify.app/",
         "source_code": "https://github.com/RoodzFernando/weather-app-js",
         "created_at": "2021-01-13T20:02:58.014Z",
         "updated_at": "2021-01-13T20:02:58.075Z",
